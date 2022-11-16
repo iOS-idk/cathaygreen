@@ -19,24 +19,30 @@ struct MenuBottomSheet: View {
         .sheet(isPresented: $showingCredits) {
             ZStack {
                 Color.accentColor.edgesIgnoringSafeArea(.all)
-                HStack {
-                    Text("Explorer more")
-                        .presentationDetents([.fraction(0.1), .large], selection: $selectedDetent)
-                    
-                    Button {
-                        selectedDetent = .large
-                    } label: {
-                        Image(systemName: "arrow.up")
+                VStack {
+                    HStack {
+                        Text("Explorer more")
+                            .font(.custom("Helvetica Neue Bold", size: 26))
+                            .foregroundColor(Color.white)
                             .padding()
-                            .frame(width: 34, height: 34)
-                            .foregroundColor(.accentColor)
-                            .background(Color.white)
-                            .clipShape(Circle())
+                        
+                        Button {
+                            selectedDetent = .large
+                        } label: {
+                            Image(systemName: "arrow.up")
+                                .padding()
+                                .frame(width: 34, height: 34)
+                                .foregroundColor(.accentColor)
+                                .background(Color.white)
+                                .clipShape(Circle())
+                        }
+                        
                     }
-                    
+                    Divider()
                 }
-                Divider()
+
             }
+            .presentationDetents([.fraction(0.1), .large], selection: $selectedDetent)
         }
 
     }
