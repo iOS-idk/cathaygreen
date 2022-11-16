@@ -9,21 +9,36 @@ import SwiftUI
 
 struct MenuBottomSheet: View {
     @State private var showingCredits = true
+    
+    @State var selectedDetent: PresentationDetent = .fraction(0.1)
 
     var body: some View {
-        Button("Show Credits") {
-            showingCredits.toggle()
+        ZStack {
+            
         }
         .sheet(isPresented: $showingCredits) {
-            Text("Explorer more")
-//                .presentationDetents([.fraction(0.1), .large])
+            ZStack {
+                Color.accentColor.edgesIgnoringSafeArea(.all)
+                HStack {
+                    Text("Explorer more")
+                        .presentationDetents([.fraction(0.1), .large], selection: $selectedDetent)
+                    
+                    Button {
+                        selectedDetent = .large
+                    } label: {
+                        Image(systemName: "arrow.up")
+                            .padding()
+                            .frame(width: 34, height: 34)
+                            .foregroundColor(.accentColor)
+                            .background(Color.white)
+                            .clipShape(Circle())
+                    }
+                    
+                }
                 Divider()
-            
-            VStack {
-                
             }
-            
         }
+
     }
 }
 
