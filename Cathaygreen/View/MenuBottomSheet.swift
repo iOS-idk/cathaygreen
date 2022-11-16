@@ -54,10 +54,10 @@ struct MenuBottomSheet: View {
                 }
 
             }
+            .cornerRadius(26, corners: [.topLeft, .topRight])
             .presentationDetents([.fraction(0.1), .large], selection: $selectedDetent)
             .presentationDragIndicator(isLarge ? .hidden : .visible)
         }
-
     }
 }
 
