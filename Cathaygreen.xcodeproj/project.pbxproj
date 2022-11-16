@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0450512829229BCD0079337C /* CathaygreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450512729229BCD0079337C /* CathaygreenApp.swift */; };
+		0450512A29229BCD0079337C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450512929229BCD0079337C /* ContentView.swift */; };
+		0450512C29229BCE0079337C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0450512B29229BCE0079337C /* Assets.xcassets */; };
+		0450512F29229BCE0079337C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0450512E29229BCE0079337C /* Preview Assets.xcassets */; };
+		0450513929229BCE0079337C /* CathaygreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450513829229BCE0079337C /* CathaygreenTests.swift */; };
+		0450514329229BCE0079337C /* CathaygreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450514229229BCE0079337C /* CathaygreenUITests.swift */; };
+		0450514529229BCE0079337C /* CathaygreenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450514429229BCE0079337C /* CathaygreenUITestsLaunchTests.swift */; };
+		0450515429229CC10079337C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450515329229CC10079337C /* HomeView.swift */; };
+		0450515629229CD10079337C /* PackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450515529229CD10079337C /* PackView.swift */; };
+		0450515929229CE80079337C /* DrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450515829229CE80079337C /* DrinkView.swift */; };
+		0450515B29229CF00079337C /* StayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450515A29229CF00079337C /* StayView.swift */; };
+		0450515D29229CFD0079337C /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450515C29229CFD0079337C /* ExploreView.swift */; };
+		0450515F29229D030079337C /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450515E29229D030079337C /* ShopView.swift */; };
+		0450516129229D120079337C /* EatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450516029229D120079337C /* EatView.swift */; };
+		0450516429229D7B0079337C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450516329229D7B0079337C /* API.swift */; };
+		0450516729229DF30079337C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0450516629229DF30079337C /* Alamofire */; };
+		0450516A29229E1A0079337C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450516929229E1A0079337C /* Constants.swift */; };
+		04C2A8072923C7EC006BFFD6 /* Color+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A8062923C7EC006BFFD6 /* Color+Assets.swift */; };
+		04C2A80B2923C95B006BFFD6 /* BackgroundRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A80A2923C95B006BFFD6 /* BackgroundRect.swift */; };
+		04C2A80E2923CC26006BFFD6 /* GeneralRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A80D2923CC26006BFFD6 /* GeneralRect.swift */; };
+		04C2A8122923CE13006BFFD6 /* MileCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A8112923CE13006BFFD6 /* MileCircle.swift */; };
+		04C2A8142923D8F7006BFFD6 /* ImageTextRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A8132923D8F7006BFFD6 /* ImageTextRect.swift */; };
+		04C2A8162923DB55006BFFD6 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A8152923DB55006BFFD6 /* RoundButton.swift */; };
+		04C2A8192923EDD4006BFFD6 /* StayExplortListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A8182923EDD4006BFFD6 /* StayExplortListRow.swift */; };
+		04C2A81D2923F016006BFFD6 /* ShopListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A81C2923F016006BFFD6 /* ShopListRow.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0450513529229BCE0079337C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0450511C29229BCD0079337C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0450512329229BCD0079337C;
+			remoteInfo = Cathaygreen;
+		};
+		0450513F29229BCE0079337C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0450511C29229BCD0079337C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0450512329229BCD0079337C;
+			remoteInfo = Cathaygreen;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0450512429229BCD0079337C /* Cathaygreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cathaygreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0450512729229BCD0079337C /* CathaygreenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CathaygreenApp.swift; sourceTree = "<group>"; };
+		0450512929229BCD0079337C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0450512B29229BCE0079337C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0450512E29229BCE0079337C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0450513429229BCE0079337C /* CathaygreenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CathaygreenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0450513829229BCE0079337C /* CathaygreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CathaygreenTests.swift; sourceTree = "<group>"; };
+		0450513E29229BCE0079337C /* CathaygreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CathaygreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0450514229229BCE0079337C /* CathaygreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CathaygreenUITests.swift; sourceTree = "<group>"; };
+		0450514429229BCE0079337C /* CathaygreenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CathaygreenUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0450515329229CC10079337C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		0450515529229CD10079337C /* PackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackView.swift; sourceTree = "<group>"; };
+		0450515829229CE80079337C /* DrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkView.swift; sourceTree = "<group>"; };
+		0450515A29229CF00079337C /* StayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayView.swift; sourceTree = "<group>"; };
+		0450515C29229CFD0079337C /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		0450515E29229D030079337C /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		0450516029229D120079337C /* EatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatView.swift; sourceTree = "<group>"; };
+		0450516329229D7B0079337C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		0450516929229E1A0079337C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		04C2A8062923C7EC006BFFD6 /* Color+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Assets.swift"; sourceTree = "<group>"; };
+		04C2A80A2923C95B006BFFD6 /* BackgroundRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundRect.swift; sourceTree = "<group>"; };
+		04C2A80D2923CC26006BFFD6 /* GeneralRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRect.swift; sourceTree = "<group>"; };
+		04C2A8112923CE13006BFFD6 /* MileCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MileCircle.swift; sourceTree = "<group>"; };
+		04C2A8132923D8F7006BFFD6 /* ImageTextRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextRect.swift; sourceTree = "<group>"; };
+		04C2A8152923DB55006BFFD6 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		04C2A8182923EDD4006BFFD6 /* StayExplortListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayExplortListRow.swift; sourceTree = "<group>"; };
+		04C2A81C2923F016006BFFD6 /* ShopListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListRow.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0450512129229BCD0079337C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0450516729229DF30079337C /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0450513129229BCE0079337C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0450513B29229BCE0079337C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0450511B29229BCD0079337C = {
+			isa = PBXGroup;
+			children = (
+				0450512629229BCD0079337C /* Cathaygreen */,
+				0450513729229BCE0079337C /* CathaygreenTests */,
+				0450514129229BCE0079337C /* CathaygreenUITests */,
+				0450512529229BCD0079337C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0450512529229BCD0079337C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0450512429229BCD0079337C /* Cathaygreen.app */,
+				0450513429229BCE0079337C /* CathaygreenTests.xctest */,
+				0450513E29229BCE0079337C /* CathaygreenUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0450512629229BCD0079337C /* Cathaygreen */ = {
+			isa = PBXGroup;
+			children = (
+				0450512729229BCD0079337C /* CathaygreenApp.swift */,
+				0450516229229D6F0079337C /* API */,
+				0450515229229CB10079337C /* Model */,
+				0450515129229CA90079337C /* View */,
+				0450516829229E110079337C /* Utility */,
+				04C2A8052923C7CF006BFFD6 /* Extensions */,
+				0450512D29229BCE0079337C /* Preview Content */,
+			);
+			path = Cathaygreen;
+			sourceTree = "<group>";
+		};
+		0450512D29229BCE0079337C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0450512E29229BCE0079337C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0450513729229BCE0079337C /* CathaygreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				0450513829229BCE0079337C /* CathaygreenTests.swift */,
+			);
+			path = CathaygreenTests;
+			sourceTree = "<group>";
+		};
+		0450514129229BCE0079337C /* CathaygreenUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0450514229229BCE0079337C /* CathaygreenUITests.swift */,
+				0450514429229BCE0079337C /* CathaygreenUITestsLaunchTests.swift */,
+			);
+			path = CathaygreenUITests;
+			sourceTree = "<group>";
+		};
+		0450515129229CA90079337C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0450512929229BCD0079337C /* ContentView.swift */,
+				04C2A80C2923CAE7006BFFD6 /* General Componets */,
+				0450515329229CC10079337C /* HomeView.swift */,
+				0450515529229CD10079337C /* PackView.swift */,
+				0450515829229CE80079337C /* DrinkView.swift */,
+				0450515E29229D030079337C /* ShopView.swift */,
+				0450515A29229CF00079337C /* StayView.swift */,
+				0450515C29229CFD0079337C /* ExploreView.swift */,
+				0450516029229D120079337C /* EatView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0450515229229CB10079337C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0450516229229D6F0079337C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0450516329229D7B0079337C /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		0450516829229E110079337C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0450512B29229BCE0079337C /* Assets.xcassets */,
+				0450516929229E1A0079337C /* Constants.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		04C2A8052923C7CF006BFFD6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04C2A8062923C7EC006BFFD6 /* Color+Assets.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04C2A80C2923CAE7006BFFD6 /* General Componets */ = {
+			isa = PBXGroup;
+			children = (
+				04C2A8112923CE13006BFFD6 /* MileCircle.swift */,
+				04C2A8132923D8F7006BFFD6 /* ImageTextRect.swift */,
+				04C2A8152923DB55006BFFD6 /* RoundButton.swift */,
+				04C2A80A2923C95B006BFFD6 /* BackgroundRect.swift */,
+				04C2A80D2923CC26006BFFD6 /* GeneralRect.swift */,
+				04C2A8182923EDD4006BFFD6 /* StayExplortListRow.swift */,
+				04C2A81C2923F016006BFFD6 /* ShopListRow.swift */,
+			);
+			path = "General Componets";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0450512329229BCD0079337C /* Cathaygreen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0450514829229BCE0079337C /* Build configuration list for PBXNativeTarget "Cathaygreen" */;
+			buildPhases = (
+				0450512029229BCD0079337C /* Sources */,
+				0450512129229BCD0079337C /* Frameworks */,
+				0450512229229BCD0079337C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cathaygreen;
+			packageProductDependencies = (
+				0450516629229DF30079337C /* Alamofire */,
+			);
+			productName = Cathaygreen;
+			productReference = 0450512429229BCD0079337C /* Cathaygreen.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0450513329229BCE0079337C /* CathaygreenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0450514B29229BCE0079337C /* Build configuration list for PBXNativeTarget "CathaygreenTests" */;
+			buildPhases = (
+				0450513029229BCE0079337C /* Sources */,
+				0450513129229BCE0079337C /* Frameworks */,
+				0450513229229BCE0079337C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0450513629229BCE0079337C /* PBXTargetDependency */,
+			);
+			name = CathaygreenTests;
+			productName = CathaygreenTests;
+			productReference = 0450513429229BCE0079337C /* CathaygreenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0450513D29229BCE0079337C /* CathaygreenUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0450514E29229BCE0079337C /* Build configuration list for PBXNativeTarget "CathaygreenUITests" */;
+			buildPhases = (
+				0450513A29229BCE0079337C /* Sources */,
+				0450513B29229BCE0079337C /* Frameworks */,
+				0450513C29229BCE0079337C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0450514029229BCE0079337C /* PBXTargetDependency */,
+			);
+			name = CathaygreenUITests;
+			productName = CathaygreenUITests;
+			productReference = 0450513E29229BCE0079337C /* CathaygreenUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0450511C29229BCD0079337C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					0450512329229BCD0079337C = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					0450513329229BCE0079337C = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 0450512329229BCD0079337C;
+					};
+					0450513D29229BCE0079337C = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 0450512329229BCD0079337C;
+					};
+				};
+			};
+			buildConfigurationList = 0450511F29229BCD0079337C /* Build configuration list for PBXProject "Cathaygreen" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0450511B29229BCD0079337C;
+			packageReferences = (
+				0450516529229DF30079337C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = 0450512529229BCD0079337C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0450512329229BCD0079337C /* Cathaygreen */,
+				0450513329229BCE0079337C /* CathaygreenTests */,
+				0450513D29229BCE0079337C /* CathaygreenUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0450512229229BCD0079337C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0450512F29229BCE0079337C /* Preview Assets.xcassets in Resources */,
+				0450512C29229BCE0079337C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0450513229229BCE0079337C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0450513C29229BCE0079337C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0450512029229BCD0079337C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C2A8162923DB55006BFFD6 /* RoundButton.swift in Sources */,
+				0450515D29229CFD0079337C /* ExploreView.swift in Sources */,
+				04C2A80B2923C95B006BFFD6 /* BackgroundRect.swift in Sources */,
+				04C2A8122923CE13006BFFD6 /* MileCircle.swift in Sources */,
+				04C2A80E2923CC26006BFFD6 /* GeneralRect.swift in Sources */,
+				04C2A8142923D8F7006BFFD6 /* ImageTextRect.swift in Sources */,
+				04C2A8192923EDD4006BFFD6 /* StayExplortListRow.swift in Sources */,
+				0450516A29229E1A0079337C /* Constants.swift in Sources */,
+				0450515429229CC10079337C /* HomeView.swift in Sources */,
+				0450516129229D120079337C /* EatView.swift in Sources */,
+				0450515B29229CF00079337C /* StayView.swift in Sources */,
+				04C2A81D2923F016006BFFD6 /* ShopListRow.swift in Sources */,
+				0450516429229D7B0079337C /* API.swift in Sources */,
+				0450512A29229BCD0079337C /* ContentView.swift in Sources */,
+				0450512829229BCD0079337C /* CathaygreenApp.swift in Sources */,
+				0450515929229CE80079337C /* DrinkView.swift in Sources */,
+				0450515F29229D030079337C /* ShopView.swift in Sources */,
+				04C2A8072923C7EC006BFFD6 /* Color+Assets.swift in Sources */,
+				0450515629229CD10079337C /* PackView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0450513029229BCE0079337C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0450513929229BCE0079337C /* CathaygreenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0450513A29229BCE0079337C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0450514529229BCE0079337C /* CathaygreenUITestsLaunchTests.swift in Sources */,
+				0450514329229BCE0079337C /* CathaygreenUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0450513629229BCE0079337C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0450512329229BCD0079337C /* Cathaygreen */;
+			targetProxy = 0450513529229BCE0079337C /* PBXContainerItemProxy */;
+		};
+		0450514029229BCE0079337C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0450512329229BCD0079337C /* Cathaygreen */;
+			targetProxy = 0450513F29229BCE0079337C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0450514629229BCE0079337C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0450514729229BCE0079337C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0450514929229BCE0079337C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Cathaygreen/Preview Content\"";
+				DEVELOPMENT_TEAM = 5JS8HUQALB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lchakkei.Cathaygreen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0450514A29229BCE0079337C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Cathaygreen/Preview Content\"";
+				DEVELOPMENT_TEAM = 5JS8HUQALB;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lchakkei.Cathaygreen;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0450514C29229BCE0079337C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JS8HUQALB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lchakkei.CathaygreenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cathaygreen.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cathaygreen";
+			};
+			name = Debug;
+		};
+		0450514D29229BCE0079337C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JS8HUQALB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lchakkei.CathaygreenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cathaygreen.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Cathaygreen";
+			};
+			name = Release;
+		};
+		0450514F29229BCE0079337C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JS8HUQALB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lchakkei.CathaygreenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cathaygreen;
+			};
+			name = Debug;
+		};
+		0450515029229BCE0079337C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5JS8HUQALB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lchakkei.CathaygreenUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cathaygreen;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0450511F29229BCD0079337C /* Build configuration list for PBXProject "Cathaygreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0450514629229BCE0079337C /* Debug */,
+				0450514729229BCE0079337C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0450514829229BCE0079337C /* Build configuration list for PBXNativeTarget "Cathaygreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0450514929229BCE0079337C /* Debug */,
+				0450514A29229BCE0079337C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0450514B29229BCE0079337C /* Build configuration list for PBXNativeTarget "CathaygreenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0450514C29229BCE0079337C /* Debug */,
+				0450514D29229BCE0079337C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0450514E29229BCE0079337C /* Build configuration list for PBXNativeTarget "CathaygreenUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0450514F29229BCE0079337C /* Debug */,
+				0450515029229BCE0079337C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0450516529229DF30079337C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0450516629229DF30079337C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0450516529229DF30079337C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 0450511C29229BCD0079337C /* Project object */;
+}
