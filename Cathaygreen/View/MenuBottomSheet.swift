@@ -10,6 +10,7 @@ import SwiftUI
 struct MenuBottomSheet: View {
     @State private var showingCredits = true
     
+    // @State private var isLarge = false
     @State var selectedDetent: PresentationDetent = .fraction(0.1)
 
     var body: some View {
@@ -25,9 +26,11 @@ struct MenuBottomSheet: View {
                             .font(.custom("Helvetica Neue Bold", size: 26))
                             .foregroundColor(Color.white)
                             .padding()
+                
                         
                         Button {
                             selectedDetent = .large
+                            // isLarge.toggle()
                         } label: {
                             Image(systemName: "arrow.up")
                                 .padding()
@@ -35,6 +38,7 @@ struct MenuBottomSheet: View {
                                 .foregroundColor(.accentColor)
                                 .background(Color.white)
                                 .clipShape(Circle())
+                                
                         }
                         
                     }
@@ -43,6 +47,7 @@ struct MenuBottomSheet: View {
 
             }
             .presentationDetents([.fraction(0.1), .large], selection: $selectedDetent)
+            
         }
 
     }

@@ -111,7 +111,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0432E38029248D9F004E79A6 /* Model */ = {
+		0432E3852925422A004E79A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -142,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				0450512729229BCD0079337C /* CathaygreenApp.swift */,
-				0432E38029248D9F004E79A6 /* Model */,
+				0432E3852925422A004E79A6 /* Model */,
 				0450516229229D6F0079337C /* API */,
 				0450515129229CA90079337C /* View */,
 				0450516829229E110079337C /* Utility */,
