@@ -37,6 +37,8 @@ struct HomeView: View {
                 ImageTextRect(title: "Pack Greener", description: "Reduce fossil fuel with lighter belongings.")
                 
                 ImageTextRect(title: "EAT", description: "See greener food suggestions.")
+                
+                MenuBottomSheet()
             }
             .padding(.top, 30)
         }

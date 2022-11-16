@@ -35,6 +35,7 @@ struct MenuBottomSheet: View {
                             .padding()
        
                         if !isLarge {
+          
                             Button {
                                 selectedDetent = .large
                             } label: {
@@ -54,7 +55,7 @@ struct MenuBottomSheet: View {
 
             }
             .presentationDetents([.fraction(0.1), .large], selection: $selectedDetent)
-            
+            .presentationDragIndicator(isLarge ? .hidden : .visible)
         }
 
     }
