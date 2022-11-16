@@ -12,8 +12,6 @@ struct HomeView: View {
         ZStack {
             ContentView()
             VStack {
-                
-                
                 MileCircle(mile: 50)
 
                 Text("Next Flight")

@@ -23,7 +23,6 @@ struct RoundButton: View {
                 .background(Color.accentColor)
                 .cornerRadius(16)
         }
-
     }
 }
 

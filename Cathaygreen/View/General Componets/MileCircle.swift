@@ -22,11 +22,26 @@ struct MileCircle: View {
                 .frame(width: 230, height: 230)
             
             VStack {
-                Text("\(mile)")
-                    .font(.custom("Helvetica Neue Bold", size: 75))
-                    .padding(.leading)
-                    .foregroundColor(Color.accentColor)
+                HStack {
+                    
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "plus")
+                            .padding()
+                            .frame(width: 34, height: 34)
+                            .foregroundColor(.white)
+                            .background(Color.accentColor)
+                            .clipShape(Circle())
+                    }
+                    
+                    Text("\(mile)")
+                        .font(.custom("Helvetica Neue Bold", size: 75))
                 
+                        .foregroundColor(Color.accentColor)
+                    
+                }
+
                 Text("ASIA MILES")
                     .font(.custom("Helvetica Neue Bold", size: 20))
                     .foregroundColor(Color.accentColor)
