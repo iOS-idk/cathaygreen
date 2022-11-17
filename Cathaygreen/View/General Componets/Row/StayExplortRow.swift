@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StayExplortListRow: View {
+struct StayExplortRow: View {
     let name: String
     let description: String
     
@@ -26,6 +26,6 @@ struct StayExplortListRow: View {
 
 struct StayExplortListRow_Previews: PreviewProvider {
     static var previews: some View {
-        StayExplortListRow(name: "Hotel ICON", description: "CarbonCare Label")
+        StayExplortRow(name: "Hotel ICON", description: "CarbonCare Label")
     }
 }

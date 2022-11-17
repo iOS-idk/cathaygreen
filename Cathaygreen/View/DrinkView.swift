@@ -15,7 +15,7 @@ struct DrinkView: View {
             ContentView()
    
             VStack {
-                PageTitle(name: "DRINK GREENER")
+                PageHeadingView(name: "DRINK GREENER")
                 
                 HStack {
                     RoundButton(title: "Buy reusable mug", cornerRadius: 30)

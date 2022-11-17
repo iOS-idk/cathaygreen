@@ -19,12 +19,12 @@ struct MileCircle: View {
                 .fill(.white)
                 .padding()
         }
+        .padding([.leading, .trailing], 80)
     }
 }
 
 struct MileCircle_Previews: PreviewProvider {
     static var previews: some View {
         MileCircle()
-            .frame(minWidth: 230, minHeight: 230)
     }
 }

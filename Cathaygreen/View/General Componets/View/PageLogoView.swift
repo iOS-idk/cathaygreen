@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PageLogo: View {
+struct PageLogoView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,6 +15,6 @@ struct PageLogo: View {
 
 struct PageLogo_Previews: PreviewProvider {
     static var previews: some View {
-        PageLogo()
+        PageLogoView()
     }
 }

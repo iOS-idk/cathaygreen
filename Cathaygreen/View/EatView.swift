@@ -15,7 +15,7 @@ struct EatView: View {
             ContentView()
    
             VStack {
-                PageTitle(name: "Eat Greener")
+                PageHeadingView(name: "Eat Greener")
                 
                 Text("Select you meal")
                     .font(.custom("Helvetica Neue Bold", size: 16))

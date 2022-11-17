@@ -17,8 +17,7 @@ struct HomeView: View {
                     MileCircle()
                     MileText(mile: 50)
                 }
-                .frame(minWidth: 230, minHeight: 230)
-
+  
                 Text("Next Flight")
                     .font(.custom("Helvetica Neue Bold", size: 16))
                     .foregroundColor(Color.accentColor)
@@ -43,9 +42,11 @@ struct HomeView: View {
                 
                 imageTextRect(title: "EAT", description: "See greener food suggestions.")
                 
-                MenuBottomSheet()
+                
             }
             .padding(.top, 30)
+            
+            MenuBottomSheet()
         }
     }
 

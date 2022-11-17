@@ -14,7 +14,7 @@ struct PackView: View {
             ContentView()
             
             VStack {
-                PageTitle(name: "PACK GREENER")
+                PageHeadingView(name: "PACK GREENER")
                 
                 Text("Average weight")
                     .font(.custom("Helvetica Neue Bold", size: 16))
