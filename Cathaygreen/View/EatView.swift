@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct EatView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     @State private var selected = 1
     
     var body: some View {
         ZStack {
-            ContentView()
+            BackgroundView()
    
             VStack {
                 PageHeadingView(name: "Eat Greener")
@@ -56,6 +58,6 @@ struct EatView: View {
 
 struct EatView_Previews: PreviewProvider {
     static var previews: some View {
-        EatView()
+        EatView().environmentObject(ViewRouter())
     }
 }

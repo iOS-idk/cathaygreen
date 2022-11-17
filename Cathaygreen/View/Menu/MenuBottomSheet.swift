@@ -69,23 +69,23 @@ struct MenuBottomSheet: View {
                 Text("Before flight")
                     .font(.custom("Helvetica Neue Bold", size: 20))
                     .foregroundColor(Color.accentColor)
-                MenuGridRow(name: "Pack")
+                MenuGridRow(titleType: .pack)
                 
                 Text("In-flight")
                     .font(.custom("Helvetica Neue Bold", size: 20))
                     .foregroundColor(Color.accentColor)
                 LazyVGrid(columns: threeColumnGrid) {
-                    MenuGridRow(name: "Eat")
-                    MenuGridRow(name: "Drink")
+                    MenuGridRow(titleType: .eat)
+                    MenuGridRow(titleType: .drink)
                 }
                 
                 Text("Anytime")
                     .font(.custom("Helvetica Neue Bold", size: 20))
                     .foregroundColor(Color.accentColor)
                 LazyVGrid(columns: threeColumnGrid) {
-                    MenuGridRow(name: "Stay")
-                    MenuGridRow(name: "Explore")
-                    MenuGridRow(name: "Shop")
+                    MenuGridRow(titleType: .stay)
+                    MenuGridRow(titleType: .explore)
+                    MenuGridRow(titleType: .shop)
                 }
                 
             }
@@ -97,7 +97,7 @@ struct MenuBottomSheet: View {
 struct MenuBottomSheet_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            ContentView()
+            BackgroundView()
             MenuBottomSheet()
         }
     }

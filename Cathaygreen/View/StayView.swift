@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct StayView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,6 +17,6 @@ struct StayView: View {
 
 struct StayView_Previews: PreviewProvider {
     static var previews: some View {
-        StayView()
+        StayView().environmentObject(ViewRouter())
     }
 }

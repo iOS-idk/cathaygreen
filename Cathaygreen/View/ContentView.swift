@@ -8,16 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
-        ZStack {
-            Color.backgroundColor.edgesIgnoringSafeArea(.all)
-            BackgroundRect()
+        switch viewRouter.currentPage {
+        case .home:
+            HomeView()
+        case .pack:
+            PackView()
+        case .eat:
+            EatView()
+        case .drink:
+            DrinkView()
+        case .shop:
+            ShopView()
+        case .stay:
+            StayView()
+        case .explore:
+            ExploreView()
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(ViewRouter())
     }
 }

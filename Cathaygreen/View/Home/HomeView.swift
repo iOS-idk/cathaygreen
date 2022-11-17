@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
         ZStack {
-            ContentView()
+            BackgroundView()
             
             VStack(spacing: 10) {
                 ZStack {
@@ -38,11 +40,9 @@ struct HomeView: View {
                     .font(.custom("Helvetica Neue Bold", size: 16))
                     .foregroundColor(Color.accentColor)
                 
-                imageTextRect(title: "Pack Greener", description: "Reduce fossil fuel with lighter belongings.")
+                imageTextButton(titleType: .pack, description: "Reduce fossil fuel with lighter belongings.")
                 
-                imageTextRect(title: "EAT", description: "See greener food suggestions.")
-                
-                
+                imageTextButton(titleType: .eat, description: "See greener food suggestions.")
             }
             .padding(.top, 30)
             
@@ -50,14 +50,18 @@ struct HomeView: View {
         }
     }
 
-    private func imageTextRect(title: String, description: String) -> some View {
-        ZStack {
-            GeneralRect().padding([.leading, .trailing], 10)
+    private func imageTextButton(titleType: Page, description: String) -> some View {
+        Button {
+            viewRouter.currentPage = titleType
+        } label: {
             HStack {
                 Image(systemName: "trash")
-        
+                    .resizable()
+                    .frame(width: 54, height: 54)
+                    .foregroundColor(.green)
+                
                 VStack {
-                    Text(title)
+                    Text("\(titleType.rawValue.uppercased()) GREENER")
                         .font(.custom("Helvetica Neue Bold", size: 26))
                         .foregroundColor(Color.accentColor)
                     Text(description)
@@ -65,13 +69,19 @@ struct HomeView: View {
                         .foregroundColor(Color.accentColor)
                 }
             }
+            .padding()
         }
+        .tint(.white)
+        .controlSize(.large)
+        .buttonStyle(.borderedProminent)
+        .padding([.leading, .trailing], 10)
+     
     }
     
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView().environmentObject(ViewRouter())
     }
 }

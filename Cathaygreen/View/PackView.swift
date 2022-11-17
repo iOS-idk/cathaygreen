@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct PackView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
         ZStack {
-            ContentView()
+            BackgroundView()
             
             VStack {
                 PageHeadingView(name: "PACK GREENER")
@@ -36,6 +37,7 @@ struct PackView: View {
                     .foregroundColor(Color.accentColor)
 
             }
+            MenuBottomSheet()
         }
     }
     
@@ -97,6 +99,6 @@ struct PackView: View {
 
 struct PackView_Previews: PreviewProvider {
     static var previews: some View {
-        PackView()
+        PackView().environmentObject(ViewRouter())
     }
 }

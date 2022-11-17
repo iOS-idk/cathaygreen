@@ -33,6 +33,8 @@
 		0450516429229D7B0079337C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450516329229D7B0079337C /* API.swift */; };
 		0450516729229DF30079337C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0450516629229DF30079337C /* Alamofire */; };
 		0450516A29229E1A0079337C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450516929229E1A0079337C /* Constants.swift */; };
+		0462F36729266CBB0005594F /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462F36629266CBB0005594F /* BackgroundView.swift */; };
+		0462F36A29267E120005594F /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462F36929267E120005594F /* ViewRouter.swift */; };
 		04C2A8072923C7EC006BFFD6 /* Color+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A8062923C7EC006BFFD6 /* Color+Assets.swift */; };
 		04C2A80B2923C95B006BFFD6 /* BackgroundRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A80A2923C95B006BFFD6 /* BackgroundRect.swift */; };
 		04C2A80E2923CC26006BFFD6 /* GeneralRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A80D2923CC26006BFFD6 /* GeneralRect.swift */; };
@@ -87,6 +89,8 @@
 		0450516029229D120079337C /* EatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatView.swift; sourceTree = "<group>"; };
 		0450516329229D7B0079337C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		0450516929229E1A0079337C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0462F36629266CBB0005594F /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		0462F36929267E120005594F /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		04C2A8062923C7EC006BFFD6 /* Color+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Assets.swift"; sourceTree = "<group>"; };
 		04C2A80A2923C95B006BFFD6 /* BackgroundRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundRect.swift; sourceTree = "<group>"; };
 		04C2A80D2923CC26006BFFD6 /* GeneralRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRect.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 			children = (
 				0405405B2925F00D004471E1 /* PageHeadingView.swift */,
 				0405406029260854004471E1 /* PageLogoView.swift */,
+				0462F36629266CBB0005594F /* BackgroundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				0450512929229BCD0079337C /* ContentView.swift */,
+				0462F36829267DB20005594F /* ViewRoute */,
 				04C2A80C2923CAE7006BFFD6 /* General Componets */,
 				04054064292609D6004471E1 /* Home */,
 				0450515529229CD10079337C /* PackView.swift */,
@@ -285,6 +291,14 @@
 				0450516929229E1A0079337C /* Constants.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		0462F36829267DB20005594F /* ViewRoute */ = {
+			isa = PBXGroup;
+			children = (
+				0462F36929267E120005594F /* ViewRouter.swift */,
+			);
+			path = ViewRoute;
 			sourceTree = "<group>";
 		};
 		04C2A8052923C7CF006BFFD6 /* Extensions */ = {
@@ -445,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0462F36729266CBB0005594F /* BackgroundView.swift in Sources */,
 				0405406829262D40004471E1 /* HeadingText.swift in Sources */,
 				04C2A8162923DB55006BFFD6 /* RoundButton.swift in Sources */,
 				0450515D29229CFD0079337C /* ExploreView.swift in Sources */,
@@ -459,6 +474,7 @@
 				0450516129229D120079337C /* EatView.swift in Sources */,
 				0450515B29229CF00079337C /* StayView.swift in Sources */,
 				04C2A81D2923F016006BFFD6 /* ShopListRow.swift in Sources */,
+				0462F36A29267E120005594F /* ViewRouter.swift in Sources */,
 				0450516429229D7B0079337C /* API.swift in Sources */,
 				0405406D29262EA8004471E1 /* MenuGridRow.swift in Sources */,
 				0450512A29229BCD0079337C /* ContentView.swift in Sources */,

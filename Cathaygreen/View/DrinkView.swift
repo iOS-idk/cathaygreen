@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct DrinkView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     @State var numRewards: Int = 2
     
     var body: some View {
         ZStack {
-            ContentView()
+            BackgroundView()
    
             VStack {
                 PageHeadingView(name: "DRINK GREENER")
@@ -54,6 +56,6 @@ struct DrinkView: View {
 
 struct DrinkView_Previews: PreviewProvider {
     static var previews: some View {
-        DrinkView()
+        DrinkView().environmentObject(ViewRouter())
     }
 }
