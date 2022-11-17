@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0432E3822924C342004E79A6 /* MenuBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432E3812924C342004E79A6 /* MenuBottomSheet.swift */; };
 		0432E3842924CB69004E79A6 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432E3832924CB69004E79A6 /* RadioButton.swift */; };
+		0432E38A2925C128004E79A6 /* RadioButtonGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432E3892925C128004E79A6 /* RadioButtonGroups.swift */; };
 		0450512829229BCD0079337C /* CathaygreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450512729229BCD0079337C /* CathaygreenApp.swift */; };
 		0450512A29229BCD0079337C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450512929229BCD0079337C /* ContentView.swift */; };
 		0450512C29229BCE0079337C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0450512B29229BCE0079337C /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 /* Begin PBXFileReference section */
 		0432E3812924C342004E79A6 /* MenuBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBottomSheet.swift; sourceTree = "<group>"; };
 		0432E3832924CB69004E79A6 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		0432E3892925C128004E79A6 /* RadioButtonGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroups.swift; sourceTree = "<group>"; };
 		0450512429229BCD0079337C /* Cathaygreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cathaygreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0450512729229BCD0079337C /* CathaygreenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CathaygreenApp.swift; sourceTree = "<group>"; };
 		0450512929229BCD0079337C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +118,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0432E3882925C11B004E79A6 /* RadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				0432E3832924CB69004E79A6 /* RadioButton.swift */,
+				0432E3892925C128004E79A6 /* RadioButtonGroups.swift */,
+			);
+			path = RadioButton;
 			sourceTree = "<group>";
 		};
 		0450511B29229BCD0079337C = {
@@ -222,6 +233,7 @@
 		04C2A80C2923CAE7006BFFD6 /* General Componets */ = {
 			isa = PBXGroup;
 			children = (
+				0432E3882925C11B004E79A6 /* RadioButton */,
 				04C2A8112923CE13006BFFD6 /* MileCircle.swift */,
 				04C2A8132923D8F7006BFFD6 /* ImageTextRect.swift */,
 				04C2A8152923DB55006BFFD6 /* RoundButton.swift */,
@@ -229,7 +241,6 @@
 				04C2A80D2923CC26006BFFD6 /* GeneralRect.swift */,
 				04C2A8182923EDD4006BFFD6 /* StayExplortListRow.swift */,
 				04C2A81C2923F016006BFFD6 /* ShopListRow.swift */,
-				0432E3832924CB69004E79A6 /* RadioButton.swift */,
 			);
 			path = "General Componets";
 			sourceTree = "<group>";
@@ -389,6 +400,7 @@
 				0432E3822924C342004E79A6 /* MenuBottomSheet.swift in Sources */,
 				0450515929229CE80079337C /* DrinkView.swift in Sources */,
 				0450515F29229D030079337C /* ShopView.swift in Sources */,
+				0432E38A2925C128004E79A6 /* RadioButtonGroups.swift in Sources */,
 				04C2A8072923C7EC006BFFD6 /* Color+Assets.swift in Sources */,
 				0450515629229CD10079337C /* PackView.swift in Sources */,
 			);
