@@ -11,33 +11,27 @@ struct PackView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
-        ZStack {
-            BackgroundView()
+        VStack {
+            PageHeadingView(name: "PACK GREENER")
             
-            VStack {
-                PageHeadingView(name: "PACK GREENER")
-                
-                Text("Average weight")
-                    .font(.custom("Helvetica Neue Bold", size: 16))
-                    .foregroundColor(Color.accentColor)
-                weightRectView(weight: 20)
-                
-                Text("Weather on destination")
-                    .font(.custom("Helvetica Neue Bold", size: 16))
-                    .foregroundColor(Color.accentColor)
-                weatherRectView(weather: "Cloudy", temp: "15-23 °C")
+            Text("Average weight")
+                .font(.custom("Helvetica Neue Bold", size: 16))
+                .foregroundColor(Color.accentColor)
+            weightRectView(weight: 20)
+            
+            Text("Weather on destination")
+                .font(.custom("Helvetica Neue Bold", size: 16))
+                .foregroundColor(Color.accentColor)
+            weatherRectView(weather: "Cloudy", temp: "15-23 °C")
 
-                Text("Suggestions")
-                    .font(.custom("Helvetica Neue Bold", size: 16))
-                    .foregroundColor(Color.accentColor)
-                suggestionRectView(numShirts: 5, numPants: 3, numJackets: 1)
-                
-                Text("20 miles reward per 1kg reductions.")
-                    .font(.custom("Helvetica Neue", size: 16))
-                    .foregroundColor(Color.accentColor)
-
-            }
-            MenuBottomSheet()
+            Text("Suggestions")
+                .font(.custom("Helvetica Neue Bold", size: 16))
+                .foregroundColor(Color.accentColor)
+            suggestionRectView(numShirts: 5, numPants: 3, numJackets: 1)
+            
+            Text("20 miles reward per 1kg reductions.")
+                .font(.custom("Helvetica Neue", size: 16))
+                .foregroundColor(Color.accentColor)
         }
     }
     
@@ -99,6 +93,9 @@ struct PackView: View {
 
 struct PackView_Previews: PreviewProvider {
     static var previews: some View {
-        PackView().environmentObject(ViewRouter())
+        ZStack {
+            BackgroundView()
+            PackView().environmentObject(ViewRouter())
+        }
     }
 }

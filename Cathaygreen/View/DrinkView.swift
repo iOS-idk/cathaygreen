@@ -13,26 +13,20 @@ struct DrinkView: View {
     @State var numRewards: Int = 2
     
     var body: some View {
-        ZStack {
-            BackgroundView()
-   
-            VStack {
-                PageHeadingView(name: "DRINK GREENER")
-                
-                HStack {
-                    RoundButton(title: "Buy reusable mug", cornerRadius: 30)
-                }
-                
-                ForEach((1...numRewards), id: \.self) { _ in
-                    rewardsRect()
-                }
-                
-                Text("10 miles reward per use.")
-                    .font(.custom("Helvetica Neue Bold", size: 16))
-                    .foregroundColor(Color.accentColor)
-
+        VStack {
+            PageHeadingView(name: "DRINK GREENER")
+            
+            HStack {
+                RoundButton(title: "Buy reusable mug", cornerRadius: 30)
             }
-            MenuBottomSheet()
+            
+            ForEach((1...numRewards), id: \.self) { _ in
+                rewardsRect()
+            }
+            
+            Text("10 miles reward per use.")
+                .font(.custom("Helvetica Neue Bold", size: 16))
+                .foregroundColor(Color.accentColor)
         }
     }
     
@@ -57,6 +51,9 @@ struct DrinkView: View {
 
 struct DrinkView_Previews: PreviewProvider {
     static var previews: some View {
-        DrinkView().environmentObject(ViewRouter())
+        ZStack {
+            BackgroundView()
+            DrinkView().environmentObject(ViewRouter())
+        }
     }
 }

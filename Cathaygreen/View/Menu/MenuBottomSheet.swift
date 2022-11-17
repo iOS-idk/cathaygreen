@@ -11,7 +11,7 @@ import BottomSheet
 struct MenuBottomSheet: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
-    private let threeColumnGrid = Array(repeating: GridItem(.flexible()), count: 2)
+    private let twoColumnGrid = Array(repeating: GridItem(.flexible()), count: 2)
     
     @State var bottomSheetPosition: BottomSheetPosition = .relative(0.1)
 
@@ -114,7 +114,7 @@ struct MenuBottomSheet: View {
                 Text("In-flight")
                     .font(.custom("Helvetica Neue Bold", size: 20))
                     .foregroundColor(Color.accentColor)
-                LazyVGrid(columns: threeColumnGrid) {
+                LazyVGrid(columns: twoColumnGrid) {
                     MenuGridRow(titleType: .eat)
                     MenuGridRow(titleType: .drink)
                 }
@@ -122,7 +122,7 @@ struct MenuBottomSheet: View {
                 Text("Anytime")
                     .font(.custom("Helvetica Neue Bold", size: 20))
                     .foregroundColor(Color.accentColor)
-                LazyVGrid(columns: threeColumnGrid) {
+                LazyVGrid(columns: twoColumnGrid) {
                     MenuGridRow(titleType: .stay)
                     MenuGridRow(titleType: .explore)
                     MenuGridRow(titleType: .shop)

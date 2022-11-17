@@ -11,43 +11,37 @@ struct HomeView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
-        ZStack {
-            BackgroundView()
-            
-            VStack(spacing: 10) {
-                ZStack {
-                    MileCircle()
-                    MileText(mile: 50)
-                }
-  
-                Text("Next Flight")
-                    .font(.custom("Helvetica Neue Bold", size: 16))
-                    .foregroundColor(Color.accentColor)
-                
-                HStack {
-                    RoundButton(title: "HKG", cornerRadius: 16)
-                    
-                    
-                    
-                    RoundButton(title: "LHR", cornerRadius: 16)
-                }
-                
-                Text("9 hours")
-                    .font(.custom("Helvetica Neue Bold", size: 16))
-                    .foregroundColor(Color.accentColor)
-        
-                Text("Go Green Advices")
-                    .font(.custom("Helvetica Neue Bold", size: 16))
-                    .foregroundColor(Color.accentColor)
-                
-                imageTextButton(titleType: .pack, description: "Reduce fossil fuel with lighter belongings.")
-                
-                imageTextButton(titleType: .eat, description: "See greener food suggestions.")
+        VStack(spacing: 10) {
+            ZStack {
+                MileCircle()
+                MileText(mile: 50)
             }
-            .padding(.top, 30)
+
+            Text("Next Flight")
+                .font(.custom("Helvetica Neue Bold", size: 16))
+                .foregroundColor(Color.accentColor)
             
-            MenuBottomSheet()
+            HStack {
+                RoundButton(title: "HKG", cornerRadius: 16)
+                
+                
+                
+                RoundButton(title: "LHR", cornerRadius: 16)
+            }
+            
+            Text("9 hours")
+                .font(.custom("Helvetica Neue Bold", size: 16))
+                .foregroundColor(Color.accentColor)
+    
+            Text("Go Green Advices")
+                .font(.custom("Helvetica Neue Bold", size: 16))
+                .foregroundColor(Color.accentColor)
+            
+            imageTextButton(titleType: .pack, description: "Reduce fossil fuel with lighter belongings.")
+            
+            imageTextButton(titleType: .eat, description: "See greener food suggestions.")
         }
+        .padding(.top, 30)
     }
 
     private func imageTextButton(titleType: Page, description: String) -> some View {
@@ -82,6 +76,9 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView().environmentObject(ViewRouter())
+        ZStack {
+            BackgroundView()
+            HomeView().environmentObject(ViewRouter())
+        }
     }
 }

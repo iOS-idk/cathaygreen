@@ -13,27 +13,22 @@ struct EatView: View {
     @State private var selected = 1
     
     var body: some View {
-        ZStack {
-            BackgroundView()
-   
-            VStack {
-                PageHeadingView(name: "Eat Greener")
-                
-                Text("Select you meal")
-                    .font(.custom("Helvetica Neue Bold", size: 16))
-                    .foregroundColor(Color.accentColor)
-                
-                RadioButtonGroups { selected in
-                    print("Selected Gender is: \(selected)")
-                }.padding()
-                
-                nextButton
+        VStack {
+            PageHeadingView(name: "Eat Greener")
+            
+            Text("Select you meal")
+                .font(.custom("Helvetica Neue Bold", size: 16))
+                .foregroundColor(Color.accentColor)
+            
+            RadioButtonGroups { selected in
+                print("Selected Gender is: \(selected)")
+            }.padding()
+            
+            nextButton
 
-                Text("10 miles reward by choosing greener food.")
-                    .font(.custom("Helvetica Neue", size: 16))
-                    .foregroundColor(Color.accentColor)
-            }
-            MenuBottomSheet()
+            Text("10 miles reward by choosing greener food.")
+                .font(.custom("Helvetica Neue", size: 16))
+                .foregroundColor(Color.accentColor)
         }
     }
     
@@ -59,6 +54,9 @@ struct EatView: View {
 
 struct EatView_Previews: PreviewProvider {
     static var previews: some View {
-        EatView().environmentObject(ViewRouter())
+        ZStack {
+            BackgroundView()
+            EatView().environmentObject(ViewRouter())
+        }
     }
 }

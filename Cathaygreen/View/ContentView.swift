@@ -12,21 +12,27 @@ struct ContentView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
-        switch viewRouter.currentPage {
-        case .home:
-            HomeView()
-        case .pack:
-            PackView()
-        case .eat:
-            EatView()
-        case .drink:
-            DrinkView()
-        case .shop:
-            ShopView()
-        case .stay:
-            StayView()
-        case .explore:
-            ExploreView()
+        ZStack {
+            BackgroundView()
+            
+            switch viewRouter.currentPage {
+            case .home:
+                HomeView()
+            case .pack:
+                PackView()
+            case .eat:
+                EatView()
+            case .drink:
+                DrinkView()
+            case .shop:
+                ShopView()
+            case .stay:
+                StayView()
+            case .explore:
+                ExploreView()
+            }
+            
+            MenuBottomSheet()
         }
     }
 }
