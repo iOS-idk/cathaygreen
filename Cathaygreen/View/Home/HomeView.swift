@@ -55,6 +55,7 @@ struct HomeView: View {
             viewRouter.currentPage = titleType
         } label: {
             HStack {
+                
                 Image(systemName: "trash")
                     .resizable()
                     .frame(width: 54, height: 54)
@@ -68,14 +69,13 @@ struct HomeView: View {
                         .font(.custom("Helvetica Neue", size: 13))
                         .foregroundColor(Color.accentColor)
                 }
+                .frame(maxWidth: .infinity)
             }
-            .padding()
         }
         .tint(.white)
         .controlSize(.large)
         .buttonStyle(.borderedProminent)
         .padding([.leading, .trailing], 10)
-     
     }
     
 }

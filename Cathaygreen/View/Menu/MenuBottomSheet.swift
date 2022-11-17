@@ -9,6 +9,8 @@ import SwiftUI
 import BottomSheet
 
 struct MenuBottomSheet: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     private let threeColumnGrid = Array(repeating: GridItem(.flexible()), count: 2)
     
     @State var bottomSheetPosition: BottomSheetPosition = .relative(0.1)
@@ -18,7 +20,7 @@ struct MenuBottomSheet: View {
     }
     
     private var backgroundColor: Color {
-        return isLarge ? .backgroundRectColor : .accentColor
+        return !isLarge ? viewRouter.currentPage == .home ? .accentColor : .white : .backgroundRectColor
     }
 
     var body: some View {
@@ -37,12 +39,11 @@ struct MenuBottomSheet: View {
             backgroundColor.edgesIgnoringSafeArea(.all)
                 .cornerRadius(32, corners: [.topLeft, .topRight])
         )
-        .dragIndicatorColor(.accentColor)
+        .dragIndicatorColor(!isLarge ? backgroundColor : .accentColor)
         .padding([.leading, .trailing], 10)
     }
     
-    @ViewBuilder
-    private func smallMenuSheet() -> some View {
+    private func homeSmallMenuSheet() -> some View {
         HStack {
             Text("Explorer more")
                 .font(.custom("Helvetica Neue Bold", size: 26))
@@ -51,14 +52,53 @@ struct MenuBottomSheet: View {
                 Button {
                     bottomSheetPosition = .relative(1)
                 } label: {
+                    Image(systemName: "arrow.up.circle.fill")
+                        .font(.system(size: 30))
+                        .foregroundColor(.white)
+                }
+            }
+        }
+    }
+    private func nothomeSmallMenuSheet() -> some View {
+        HStack {
+            if !isLarge {
+                Button {
+                    viewRouter.currentPage = .home
+                } label: {
+                    Image(systemName: "arrow.up.backward.circle")
+                        .font(.system(size: 30))
+                        .foregroundColor(Color.accentColor)
+                        .rotationEffect(.degrees(-45))
+                }
+                Spacer()
+            }
+            
+            Text("Explorer more")
+                .font(.custom("Helvetica Neue Bold", size: 20))
+                .foregroundColor(.accentColor)
+            
+            if !isLarge {
+                Button {
+                    bottomSheetPosition = .relative(1)
+                } label: {
                     Image(systemName: "arrow.up")
                         .padding()
                         .frame(width: 34, height: 34)
-                        .foregroundColor(.accentColor)
-                        .background(Color.white)
+                        .foregroundColor(Color.white)
+                        .background(Color.accentColor)
                         .clipShape(Circle())
                 }
             }
+        }
+        .padding([.leading, .trailing], 20)
+    }
+    
+    @ViewBuilder
+    private func smallMenuSheet() -> some View {
+        if viewRouter.currentPage == .home {
+            homeSmallMenuSheet()
+        } else {
+            nothomeSmallMenuSheet()
         }
     }
     private func fullMenuSheet() -> some View {
@@ -89,6 +129,7 @@ struct MenuBottomSheet: View {
                 }
                 
             }
+            .scrollIndicators(.hidden)
             .padding()
         }
     }
@@ -98,7 +139,7 @@ struct MenuBottomSheet_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             BackgroundView()
-            MenuBottomSheet()
+            MenuBottomSheet().environmentObject(ViewRouter())
         }
     }
 }

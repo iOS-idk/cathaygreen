@@ -32,6 +32,7 @@ struct DrinkView: View {
                     .foregroundColor(Color.accentColor)
 
             }
+            MenuBottomSheet()
         }
     }
     

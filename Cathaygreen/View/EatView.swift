@@ -33,6 +33,7 @@ struct EatView: View {
                     .font(.custom("Helvetica Neue", size: 16))
                     .foregroundColor(Color.accentColor)
             }
+            MenuBottomSheet()
         }
     }
     
