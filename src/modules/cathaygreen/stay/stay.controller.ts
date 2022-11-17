@@ -1,6 +1,6 @@
-import { Controller, Get, Post, Body, Param } from '@nestjs/common';
-import { StayService } from './stay.service';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { CreateStayDto } from './dto/create-stay.dto';
+import { StayService } from './stay.service';
 
 @Controller('stay')
 export class StayController {

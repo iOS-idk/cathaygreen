@@ -1,7 +1,9 @@
-import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
 import { CreateStayDto } from './dto/create-stay.dto';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Injectable } from '@nestjs/common';
+import { RecordService } from '../record/record.service';
+import { RecordType } from '../enums';
+import { Repository } from 'typeorm';
 import { Stay } from './entities/stay.entity';
 
 @Injectable()
@@ -9,11 +11,18 @@ export class StayService {
   constructor(
     @InjectRepository(Stay)
     private stayRepo: Repository<Stay>,
+
+    private readonly recordService: RecordService,
   ) {}
 
-  reserve(id: number) {
-    const stay = this.stayRepo.findOneBy({ id });
-    return 'This action adds a new stay';
+  async reserve(id: number) {
+    const stay = await this.stayRepo.findOneBy({ id });
+    const record = this.recordService.create({
+      type: RecordType.STAY,
+      refId: stay.id,
+      mile: stay.mile,
+    });
+    return record;
   }
 
   create(createStayDto: CreateStayDto): Promise<Stay> {
