@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0405405C2925F00D004471E1 /* PageTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405405B2925F00D004471E1 /* PageTitle.swift */; };
+		0405405F2925F4A0004471E1 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 0405405E2925F4A0004471E1 /* BottomSheet */; };
+		0405406129260854004471E1 /* PageLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405406029260854004471E1 /* PageLogo.swift */; };
+		0405406629260AFC004471E1 /* MileText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405406529260AFC004471E1 /* MileText.swift */; };
 		0432E3822924C342004E79A6 /* MenuBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432E3812924C342004E79A6 /* MenuBottomSheet.swift */; };
 		0432E3842924CB69004E79A6 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432E3832924CB69004E79A6 /* RadioButton.swift */; };
 		0432E38A2925C128004E79A6 /* RadioButtonGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432E3892925C128004E79A6 /* RadioButtonGroups.swift */; };
@@ -31,7 +35,6 @@
 		04C2A80B2923C95B006BFFD6 /* BackgroundRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A80A2923C95B006BFFD6 /* BackgroundRect.swift */; };
 		04C2A80E2923CC26006BFFD6 /* GeneralRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A80D2923CC26006BFFD6 /* GeneralRect.swift */; };
 		04C2A8122923CE13006BFFD6 /* MileCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A8112923CE13006BFFD6 /* MileCircle.swift */; };
-		04C2A8142923D8F7006BFFD6 /* ImageTextRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A8132923D8F7006BFFD6 /* ImageTextRect.swift */; };
 		04C2A8162923DB55006BFFD6 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A8152923DB55006BFFD6 /* RoundButton.swift */; };
 		04C2A8192923EDD4006BFFD6 /* StayExplortListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A8182923EDD4006BFFD6 /* StayExplortListRow.swift */; };
 		04C2A81D2923F016006BFFD6 /* ShopListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A81C2923F016006BFFD6 /* ShopListRow.swift */; };
@@ -55,6 +58,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0405405B2925F00D004471E1 /* PageTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTitle.swift; sourceTree = "<group>"; };
+		0405406029260854004471E1 /* PageLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageLogo.swift; sourceTree = "<group>"; };
+		0405406529260AFC004471E1 /* MileText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MileText.swift; sourceTree = "<group>"; };
 		0432E3812924C342004E79A6 /* MenuBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBottomSheet.swift; sourceTree = "<group>"; };
 		0432E3832924CB69004E79A6 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		0432E3892925C128004E79A6 /* RadioButtonGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroups.swift; sourceTree = "<group>"; };
@@ -81,7 +87,6 @@
 		04C2A80A2923C95B006BFFD6 /* BackgroundRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundRect.swift; sourceTree = "<group>"; };
 		04C2A80D2923CC26006BFFD6 /* GeneralRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRect.swift; sourceTree = "<group>"; };
 		04C2A8112923CE13006BFFD6 /* MileCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MileCircle.swift; sourceTree = "<group>"; };
-		04C2A8132923D8F7006BFFD6 /* ImageTextRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextRect.swift; sourceTree = "<group>"; };
 		04C2A8152923DB55006BFFD6 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		04C2A8182923EDD4006BFFD6 /* StayExplortListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StayExplortListRow.swift; sourceTree = "<group>"; };
 		04C2A81C2923F016006BFFD6 /* ShopListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListRow.swift; sourceTree = "<group>"; };
@@ -93,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0450516729229DF30079337C /* Alamofire in Frameworks */,
+				0405405F2925F4A0004471E1 /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +119,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0405406229260862004471E1 /* Rect */ = {
+			isa = PBXGroup;
+			children = (
+				04C2A80D2923CC26006BFFD6 /* GeneralRect.swift */,
+				04C2A80A2923C95B006BFFD6 /* BackgroundRect.swift */,
+			);
+			path = Rect;
+			sourceTree = "<group>";
+		};
+		0405406329260870004471E1 /* Row */ = {
+			isa = PBXGroup;
+			children = (
+				04C2A8182923EDD4006BFFD6 /* StayExplortListRow.swift */,
+				04C2A81C2923F016006BFFD6 /* ShopListRow.swift */,
+			);
+			path = Row;
+			sourceTree = "<group>";
+		};
+		04054064292609D6004471E1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				04C2A8112923CE13006BFFD6 /* MileCircle.swift */,
+				0450515329229CC10079337C /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		0432E3852925422A004E79A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,13 +153,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0432E3882925C11B004E79A6 /* RadioButton */ = {
+		0432E3882925C11B004E79A6 /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				04C2A8152923DB55006BFFD6 /* RoundButton.swift */,
 				0432E3832924CB69004E79A6 /* RadioButton.swift */,
 				0432E3892925C128004E79A6 /* RadioButtonGroups.swift */,
 			);
-			path = RadioButton;
+			path = Button;
 			sourceTree = "<group>";
 		};
 		0450511B29229BCD0079337C = {
@@ -193,7 +227,7 @@
 			children = (
 				0450512929229BCD0079337C /* ContentView.swift */,
 				04C2A80C2923CAE7006BFFD6 /* General Componets */,
-				0450515329229CC10079337C /* HomeView.swift */,
+				04054064292609D6004471E1 /* Home */,
 				0450515529229CD10079337C /* PackView.swift */,
 				0450515829229CE80079337C /* DrinkView.swift */,
 				0450515E29229D030079337C /* ShopView.swift */,
@@ -233,14 +267,12 @@
 		04C2A80C2923CAE7006BFFD6 /* General Componets */ = {
 			isa = PBXGroup;
 			children = (
-				0432E3882925C11B004E79A6 /* RadioButton */,
-				04C2A8112923CE13006BFFD6 /* MileCircle.swift */,
-				04C2A8132923D8F7006BFFD6 /* ImageTextRect.swift */,
-				04C2A8152923DB55006BFFD6 /* RoundButton.swift */,
-				04C2A80A2923C95B006BFFD6 /* BackgroundRect.swift */,
-				04C2A80D2923CC26006BFFD6 /* GeneralRect.swift */,
-				04C2A8182923EDD4006BFFD6 /* StayExplortListRow.swift */,
-				04C2A81C2923F016006BFFD6 /* ShopListRow.swift */,
+				0405406329260870004471E1 /* Row */,
+				0405406229260862004471E1 /* Rect */,
+				0432E3882925C11B004E79A6 /* Button */,
+				0405405B2925F00D004471E1 /* PageTitle.swift */,
+				0405406029260854004471E1 /* PageLogo.swift */,
+				0405406529260AFC004471E1 /* MileText.swift */,
 			);
 			path = "General Componets";
 			sourceTree = "<group>";
@@ -263,6 +295,7 @@
 			name = Cathaygreen;
 			packageProductDependencies = (
 				0450516629229DF30079337C /* Alamofire */,
+				0405405E2925F4A0004471E1 /* BottomSheet */,
 			);
 			productName = Cathaygreen;
 			productReference = 0450512429229BCD0079337C /* Cathaygreen.app */;
@@ -338,6 +371,7 @@
 			mainGroup = 0450511B29229BCD0079337C;
 			packageReferences = (
 				0450516529229DF30079337C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				0405405D2925F4A0004471E1 /* XCRemoteSwiftPackageReference "BottomSheet" */,
 			);
 			productRefGroup = 0450512529229BCD0079337C /* Products */;
 			projectDirPath = "";
@@ -386,8 +420,9 @@
 				04C2A80B2923C95B006BFFD6 /* BackgroundRect.swift in Sources */,
 				04C2A8122923CE13006BFFD6 /* MileCircle.swift in Sources */,
 				04C2A80E2923CC26006BFFD6 /* GeneralRect.swift in Sources */,
-				04C2A8142923D8F7006BFFD6 /* ImageTextRect.swift in Sources */,
+				0405406629260AFC004471E1 /* MileText.swift in Sources */,
 				04C2A8192923EDD4006BFFD6 /* StayExplortListRow.swift in Sources */,
+				0405406129260854004471E1 /* PageLogo.swift in Sources */,
 				0450516A29229E1A0079337C /* Constants.swift in Sources */,
 				0450515429229CC10079337C /* HomeView.swift in Sources */,
 				0450516129229D120079337C /* EatView.swift in Sources */,
@@ -398,6 +433,7 @@
 				0450512829229BCD0079337C /* CathaygreenApp.swift in Sources */,
 				0432E3842924CB69004E79A6 /* RadioButton.swift in Sources */,
 				0432E3822924C342004E79A6 /* MenuBottomSheet.swift in Sources */,
+				0405405C2925F00D004471E1 /* PageTitle.swift in Sources */,
 				0450515929229CE80079337C /* DrinkView.swift in Sources */,
 				0450515F29229D030079337C /* ShopView.swift in Sources */,
 				0432E38A2925C128004E79A6 /* RadioButtonGroups.swift in Sources */,
@@ -729,6 +765,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0405405D2925F4A0004471E1 /* XCRemoteSwiftPackageReference "BottomSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lucaszischka/BottomSheet.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		0450516529229DF30079337C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -740,6 +784,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0405405E2925F4A0004471E1 /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0405405D2925F4A0004471E1 /* XCRemoteSwiftPackageReference "BottomSheet" */;
+			productName = BottomSheet;
+		};
 		0450516629229DF30079337C /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0450516529229DF30079337C /* XCRemoteSwiftPackageReference "Alamofire" */;

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ShopListRow: View {
-    @State var name: String
-    @State var description: String
+    let name: String
+    let description: String
     
     var body: some View {
         HStack {
@@ -22,7 +22,7 @@ struct ShopListRow: View {
                     .font(.custom("Helvetica Neue", size: 24))
                     .foregroundColor(Color.accentColor)
                 
-                RoundButton(title: "Reserve")
+                RoundButton(title: "Reserve", cornerRadius: 16)
             }
         }
 

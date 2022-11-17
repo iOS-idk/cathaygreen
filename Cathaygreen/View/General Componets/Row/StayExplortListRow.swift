@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct StayExplortListRow: View {
-    @State var name: String
-    @State var description: String
+    let name: String
+    let description: String
     
     var body: some View {
         VStack {
-            RoundButton(title: "Reserve")
+            RoundButton(title: "Reserve", cornerRadius: 16)
             Text(name)
                 .font(.custom("Helvetica Neue Bold", size: 24))
                 .foregroundColor(Color.accentColor)

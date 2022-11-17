@@ -58,7 +58,7 @@ struct RadioButton: View {
             .foregroundColor(Color.white)
             .padding()
             .overlay(
-                RoundedRectangle(cornerRadius: 6)
+                RoundedRectangle(cornerRadius: 20)
                     .stroke(Color.accentColor, lineWidth: 2)
             )
             

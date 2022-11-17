@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct RoundButton: View {
-    @State var title: String
+    let title: String
+    let cornerRadius: CGFloat
     
     var body: some View {
         Button {
@@ -16,18 +17,17 @@ struct RoundButton: View {
         } label: {
             Text(title)
                 .padding()
-                .padding(.leading, 10)
-                .padding(.trailing, 10)
+                .padding([.leading, .trailing], 10)
                 .font(.custom("Helvetica Neue Bold", size: 26))
                 .foregroundColor(.white)
                 .background(Color.accentColor)
-                .cornerRadius(16)
+                .cornerRadius(cornerRadius)
         }
     }
 }
 
 struct RouteButton_Previews: PreviewProvider {
     static var previews: some View {
-        RoundButton(title: "HKG")
+        RoundButton(title: "HKG", cornerRadius: 16)
     }
 }

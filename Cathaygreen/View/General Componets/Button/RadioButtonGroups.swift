@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-enum Gender: String {
-    case male = "Male"
-    case female = "Female"
-    case skip = "Skip"
-    case halfRationFoods = "Half ration foods"
-    case lowCarbonFood = "Low carbon food"
-}
-
 struct RadioButtonGroups: View {
     let callback: (String) -> ()
     
@@ -23,7 +15,7 @@ struct RadioButtonGroups: View {
     var options = ["Skip", "Half ration foods", "Low carbon food"]
     
     var body: some View {
-        VStack {
+        VStack(spacing: 10) {
             ForEach(options, id: \.self) { name in
                 RadioButton(
                     id: name,

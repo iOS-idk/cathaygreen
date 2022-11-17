@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import BottomSheet
 
 struct MenuBottomSheet: View {
+    
+    @State var bottomSheetPosition: BottomSheetPosition = .relative(0.4)
+    
     @State private var showingCredits = true
     
     private var isLarge: Bool {
@@ -24,40 +28,11 @@ struct MenuBottomSheet: View {
         ZStack {
             
         }
-        .sheet(isPresented: $showingCredits) {
-            ZStack {
-                backgroundColor.edgesIgnoringSafeArea(.all)
-                VStack {
-                    HStack {
-                        Text("Explorer more")
-                            .font(.custom("Helvetica Neue Bold", size: 26))
-                            .foregroundColor(isLarge ? .accentColor : .white)
-                            .padding()
-       
-                        if !isLarge {
-          
-                            Button {
-                                selectedDetent = .large
-                            } label: {
-                                Image(systemName: "arrow.up")
-                                    .padding()
-                                    .frame(width: 34, height: 34)
-                                    .foregroundColor(.accentColor)
-                                    .background(Color.white)
-                                    .clipShape(Circle())
-                                    
-                            }
-                        }
-                        
-                    }
-                    Divider()
-                }
-
-            }
-            .cornerRadius(26, corners: [.topLeft, .topRight])
-            .presentationDetents([.fraction(0.1), .large], selection: $selectedDetent)
-            .presentationDragIndicator(isLarge ? .hidden : .visible)
+        .bottomSheet(bottomSheetPosition: $bottomSheetPosition, switchablePositions: [.dynamic]) {
+            Text("Hello")
         }
+        .dragIndicatorColor(.accentColor)
+        .padding([.leading, .trailing], 20)
     }
 }
 

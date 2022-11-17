@@ -8,90 +8,91 @@
 import SwiftUI
 
 struct PackView: View {
+    
     var body: some View {
         ZStack {
             ContentView()
             
             VStack {
-                
-                ZStack {
-                    GeneralRect()
-                    HStack {
-                        Text("PACK")
-                            .font(.custom("Helvetica Neue Bold", size: 34))
-                            .foregroundColor(Color.accentColor)
-                        Text("GREENER")
-                            .font(.custom("Helvetica Neue Bold", size: 34))
-                            .foregroundColor(Color.accentColor)
-                    }
-                }
+                PageTitle(name: "PACK GREENER")
                 
                 Text("Average weight")
                     .font(.custom("Helvetica Neue Bold", size: 16))
                     .foregroundColor(Color.accentColor)
-                ZStack {
-                    GeneralRect(rectWidth: 240)
-                    HStack {
-         
-                    }
-                }
+                weightRectView(weight: 20)
                 
                 Text("Weather on destination")
                     .font(.custom("Helvetica Neue Bold", size: 16))
                     .foregroundColor(Color.accentColor)
-                ZStack {
-                    GeneralRect(rectWidth: 330)
-                    HStack {
-                        Text("Cloudy")
-                            .font(.custom("Helvetica Neue Bold", size: 24))
-                            .foregroundColor(Color.accentColor)
-                        // Image
-                        Text("15-23 C")
-                            .font(.custom("Helvetica Neue Bold", size: 24))
-                            .foregroundColor(Color.accentColor)
-                    }
-                }
-        
+                weatherRectView(weather: "Cloudy", temp: "15-23 °C")
+
                 Text("Suggestions")
                     .font(.custom("Helvetica Neue Bold", size: 16))
                     .foregroundColor(Color.accentColor)
-                ZStack {
-                    GeneralRect(rectWidth: 330)
-                    HStack {
-                        VStack {
-                            Text("5")
-                                .font(.custom("Helvetica Neue Bold", size: 24))
-                                .foregroundColor(Color.accentColor)
-                            Text("SHIRTS")
-                                .font(.custom("Helvetica Neue", size: 24))
-                                .foregroundColor(Color.accentColor)
-                        }
-                        VStack {
-                            Text("3")
-                                .font(.custom("Helvetica Neue Bold", size: 24))
-                                .foregroundColor(Color.accentColor)
-                            Text("PANTS")
-                                .font(.custom("Helvetica Neue", size: 24))
-                                .foregroundColor(Color.accentColor)
-                        }
-                        VStack {
-                            Text("1")
-                                .font(.custom("Helvetica Neue Bold", size: 24))
-                                .foregroundColor(Color.accentColor)
-                            Text("JACKETS")
-                                .font(.custom("Helvetica Neue", size: 24))
-                                .foregroundColor(Color.accentColor)
-                        }
-                    }
-                }
+                suggestionRectView(numShirts: 5, numPants: 3, numJackets: 1)
                 
-                Text(" 20 miles reward per 1kg reductions.")
+                Text("20 miles reward per 1kg reductions.")
                     .font(.custom("Helvetica Neue", size: 16))
                     .foregroundColor(Color.accentColor)
 
             }
         }
     }
+    
+    private func weightRectView(weight: Int) -> some View {
+        ZStack {
+            GeneralRect().padding([.leading, .trailing], 60)
+            HStack {
+ 
+            }
+        }
+    }
+    private func weatherRectView(weather: String, temp: String) -> some View {
+        ZStack {
+            GeneralRect().padding([.leading, .trailing], 30)
+            HStack {
+                Text(weather)
+                    .font(.custom("Helvetica Neue Bold", size: 24))
+                    .foregroundColor(Color.accentColor)
+                // Image
+                Text(temp)
+                    .font(.custom("Helvetica Neue Bold", size: 24))
+                    .foregroundColor(Color.accentColor)
+            }
+        }
+    }
+    private func suggestionRectView(numShirts: Int, numPants: Int, numJackets: Int) -> some View {
+        ZStack {
+            GeneralRect().padding([.leading, .trailing], 30)
+            HStack {
+                VStack {
+                    Text("\(numShirts)")
+                        .font(.custom("Helvetica Neue Bold", size: 24))
+                        .foregroundColor(Color.accentColor)
+                    Text("SHIRTS")
+                        .font(.custom("Helvetica Neue", size: 24))
+                        .foregroundColor(Color.accentColor)
+                }
+                VStack {
+                    Text("\(numPants)")
+                        .font(.custom("Helvetica Neue Bold", size: 24))
+                        .foregroundColor(Color.accentColor)
+                    Text("PANTS")
+                        .font(.custom("Helvetica Neue", size: 24))
+                        .foregroundColor(Color.accentColor)
+                }
+                VStack {
+                    Text("\(numJackets)")
+                        .font(.custom("Helvetica Neue Bold", size: 24))
+                        .foregroundColor(Color.accentColor)
+                    Text("JACKETS")
+                        .font(.custom("Helvetica Neue", size: 24))
+                        .foregroundColor(Color.accentColor)
+                }
+            }
+        }
+    }
+
 }
 
 struct PackView_Previews: PreviewProvider {
