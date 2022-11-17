@@ -9,7 +9,7 @@ import SwiftUI
 import BottomSheet
 
 struct MenuBottomSheet: View {
-    private var threeColumnGrid = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+    private let threeColumnGrid = Array(repeating: GridItem(.flexible()), count: 2)
     
     @State var bottomSheetPosition: BottomSheetPosition = .relative(0.1)
 
@@ -18,7 +18,7 @@ struct MenuBottomSheet: View {
     }
     
     private var backgroundColor: Color {
-        return isLarge ? .white : .accentColor
+        return isLarge ? .backgroundRectColor : .accentColor
     }
 
     var body: some View {
@@ -65,26 +65,31 @@ struct MenuBottomSheet: View {
         VStack {
             Divider()
             ScrollView {
-                LazyHGrid(rows: threeColumnGrid) {
-                    HStack {
-                        VStack {
-                            Text("H")
-                            Image(systemName: "hand.wave")
-                            Text("World")
-                        }
-                        VStack {
-                            Text("H")
-                            Image(systemName: "hand.wave")
-                            Text("World")
-                        }
-                        VStack {
-                            Text("H")
-                            Image(systemName: "hand.wave")
-                            Text("World")
-                        }
-                    }
+                
+                Text("Before flight")
+                    .font(.custom("Helvetica Neue Bold", size: 20))
+                    .foregroundColor(Color.accentColor)
+                MenuGridRow(name: "Pack")
+                
+                Text("In-flight")
+                    .font(.custom("Helvetica Neue Bold", size: 20))
+                    .foregroundColor(Color.accentColor)
+                LazyVGrid(columns: threeColumnGrid) {
+                    MenuGridRow(name: "Eat")
+                    MenuGridRow(name: "Drink")
                 }
+                
+                Text("Anytime")
+                    .font(.custom("Helvetica Neue Bold", size: 20))
+                    .foregroundColor(Color.accentColor)
+                LazyVGrid(columns: threeColumnGrid) {
+                    MenuGridRow(name: "Stay")
+                    MenuGridRow(name: "Explore")
+                    MenuGridRow(name: "Shop")
+                }
+                
             }
+            .padding()
         }
     }
 }
