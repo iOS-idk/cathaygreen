@@ -3,6 +3,7 @@ import { Module, ValidationError, ValidationPipe } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { APP_PIPE, APP_INTERCEPTOR } from '@nestjs/core';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { CathaygreenModule } from '@mod/cathaygreen/cathaygreen.module';
 import { AppConfig } from './app.config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -13,6 +14,8 @@ import { AppService } from './app.service';
     ConfigModule.forRoot(AppConfig.getInitConifg()),
     // Database Module
     TypeOrmModule.forRootAsync(AppConfig.getTypeOrmConfig()),
+    // Other Modules
+    CathaygreenModule,
   ],
   controllers: [AppController],
   providers: [
