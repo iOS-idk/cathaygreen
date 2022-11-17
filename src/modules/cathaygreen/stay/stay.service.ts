@@ -2,7 +2,6 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CreateStayDto } from './dto/create-stay.dto';
-import { UpdateStayDto } from './dto/update-stay.dto';
 import { Stay } from './entities/stay.entity';
 
 @Injectable()
