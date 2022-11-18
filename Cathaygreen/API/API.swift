@@ -13,6 +13,7 @@ class API: ObservableObject {
     @Published var shop = [Shop]()
     @Published var stay = [StayExplore]()
     @Published var explore = [StayExplore]()
+    @Published var eatFood = [EatFood]()
     
     func fetchAllShop() async throws {
         shop = [
@@ -32,6 +33,13 @@ class API: ObservableObject {
         explore = [
             StayExplore(name: "Electric Car Rental", description: "Reduce car CO2 emissions", mile: 30),
             StayExplore(name: "ECO Day Trips", description: "Mindful travel experience", mile: 20),
+        ]
+    }
+    
+    func fetchEatFood() async throws {
+        eatFood = [
+            EatFood(name: "Vegetarian Lacto-Ovo Meal"),
+            EatFood(name: "Vegetarian Raw Meal")
         ]
     }
     

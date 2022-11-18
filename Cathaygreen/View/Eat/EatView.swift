@@ -35,7 +35,7 @@ struct EatView: View {
     
     private var nextButton: some View {
         Button {
-
+            viewRouter.currentPage = .eatFood
         } label: {
             HStack(alignment: .center, spacing: 10) {
                 Text("Next")
@@ -55,8 +55,7 @@ struct EatView: View {
 
 struct EatView_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            BackgroundView()
+        BackgroundView {
             EatView().environmentObject(ViewRouter())
         }
     }

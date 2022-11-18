@@ -12,9 +12,7 @@ struct ContentView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
-        ZStack {
-            BackgroundView()
-            
+        BackgroundView {
             switch viewRouter.currentPage {
             case .home: HomeView()
             case .pack: PackView()
@@ -25,7 +23,6 @@ struct ContentView: View {
             case .stay: StayView()
             case .explore: ExploreView()
             }
-            
             MenuBottomSheet()
         }
     }

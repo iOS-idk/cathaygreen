@@ -17,7 +17,7 @@ struct MileCircle: View {
                 
             Circle()
                 .fill(.white)
-                .padding()
+                .padding(.all, 10)
         }
         .padding([.leading, .trailing], 80)
     }

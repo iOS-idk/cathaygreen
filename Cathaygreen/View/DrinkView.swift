@@ -17,6 +17,7 @@ struct DrinkView: View {
             PageHeadingView(name: "DRINK GREENER")
             
             HStack {
+                
                 RoundButton(title: "Buy reusable mug", cornerRadius: 30)
             }
             
@@ -31,8 +32,7 @@ struct DrinkView: View {
     }
     
     private func rewardsRect() -> some View {
-        ZStack {
-            GeneralRect().padding([.leading, .trailing], 10)
+        GeneralRect {
             HStack {
                 Text("10 min ago")
                     .font(.custom("Helvetica Neue Bold", size: 16))
@@ -51,8 +51,7 @@ struct DrinkView: View {
 
 struct DrinkView_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            BackgroundView()
+        BackgroundView {
             DrinkView().environmentObject(ViewRouter())
         }
     }

@@ -7,11 +7,22 @@
 
 import SwiftUI
 
-struct GeneralRect: View {
+struct GeneralRect<Content: View>: View {
+    var content: Content
+    
+    init(@ViewBuilder content: @escaping () -> Content) {
+        self.content = content()
+    }
+    
     var body: some View {
-        RoundedRectangle(cornerRadius: 33)
-            .fill(.white)
-            .frame(height: 100)
+        ZStack {
+            RoundedRectangle(cornerRadius: 33)
+                .fill(.white)
+                .frame(maxWidth: .infinity)
+                .frame(height: 100)
+            
+            content
+        }
     }
 }
 
@@ -19,7 +30,10 @@ struct GeneralRect_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.backgroundColor.edgesIgnoringSafeArea(.all)
-            GeneralRect().padding([.leading, .trailing], 5)
+            GeneralRect {
+                Text("Hello")
+            }
+            .padding([.leading, .trailing], 5)
         }
     }
 }

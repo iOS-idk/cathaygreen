@@ -17,7 +17,7 @@ struct EatFoodRow: View {
                     .resizable()
                     .cornerRadius(8)
             }
-            .frame(maxHeight: 200)
+            .frame(maxHeight: 160)
             .scaledToFill()
             
             Text(eatFood.name)

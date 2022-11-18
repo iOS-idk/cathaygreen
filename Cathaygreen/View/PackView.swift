@@ -23,7 +23,7 @@ struct PackView: View {
                 .font(.custom("Helvetica Neue Bold", size: 16))
                 .foregroundColor(Color.accentColor)
             weatherRectView(weather: "Cloudy", temp: "15-23 °C")
-
+            
             Text("Suggestions")
                 .font(.custom("Helvetica Neue Bold", size: 16))
                 .foregroundColor(Color.accentColor)
@@ -36,16 +36,18 @@ struct PackView: View {
     }
     
     private func weightRectView(weight: Int) -> some View {
-        ZStack {
-            GeneralRect().padding([.leading, .trailing], 60)
+        GeneralRect {
             HStack {
- 
+                Text("20 KG")
+                    .font(.custom("Helvetica Neue Bold", size: 36))
+                    .foregroundColor(Color.accentColor)
+                    .frame(maxWidth: .infinity)
             }
         }
+        .padding([.leading, .trailing], 60)
     }
     private func weatherRectView(weather: String, temp: String) -> some View {
-        ZStack {
-            GeneralRect().padding([.leading, .trailing], 30)
+        GeneralRect {
             HStack {
                 Text(weather)
                     .font(.custom("Helvetica Neue Bold", size: 24))
@@ -55,11 +57,12 @@ struct PackView: View {
                     .font(.custom("Helvetica Neue Bold", size: 24))
                     .foregroundColor(Color.accentColor)
             }
+            .frame(maxWidth: .infinity)
         }
+        .padding([.leading, .trailing], 30)
     }
     private func suggestionRectView(numShirts: Int, numPants: Int, numJackets: Int) -> some View {
-        ZStack {
-            GeneralRect().padding([.leading, .trailing], 30)
+        GeneralRect {
             HStack {
                 VStack {
                     Text("\(numShirts)")
@@ -86,15 +89,16 @@ struct PackView: View {
                         .foregroundColor(Color.accentColor)
                 }
             }
+            .frame(maxWidth: .infinity)
         }
+        .padding([.leading, .trailing], 30)
     }
 
 }
 
 struct PackView_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            BackgroundView()
+        BackgroundView {
             PackView().environmentObject(ViewRouter())
         }
     }

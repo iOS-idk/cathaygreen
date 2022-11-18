@@ -11,10 +11,8 @@ struct PageHeadingView: View {
     let name: String
     
     var body: some View {
-        ZStack {
-            GeneralRect().padding([.leading, .trailing], 10)
+        GeneralRect {
             HeadingText(name: name)
-            
         }
     }
 }

@@ -78,8 +78,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            BackgroundView()
+        BackgroundView {
             HomeView().environmentObject(ViewRouter())
         }
     }

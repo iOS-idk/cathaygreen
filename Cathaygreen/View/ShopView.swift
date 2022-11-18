@@ -31,8 +31,7 @@ struct ShopView: View {
 
 struct ShopView_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            BackgroundView()
+        BackgroundView {
             ShopView()
                 .environmentObject(ViewRouter())
                 .environmentObject(API())

@@ -22,7 +22,7 @@ struct MenuGridItemButton: View {
                     .frame(width: 54, height: 54)
                     .foregroundColor(.green)
 
-                Text(titleType.rawValue)
+                Text(titleType.rawValue.capitalized)
                     .font(.custom("Helvetica Neue Bold", size: 20))
                     .foregroundColor(Color.accentColor)
                     .offset(y: 10)

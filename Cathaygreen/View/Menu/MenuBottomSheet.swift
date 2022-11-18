@@ -136,8 +136,7 @@ struct MenuBottomSheet: View {
 
 struct MenuBottomSheet_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            BackgroundView()
+        BackgroundView {
             MenuBottomSheet().environmentObject(ViewRouter())
         }
     }

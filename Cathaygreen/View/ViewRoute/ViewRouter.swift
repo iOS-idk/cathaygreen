@@ -8,13 +8,13 @@
 import SwiftUI
 
 enum Page: String {
-    case home = "Home"
-    case pack = "Pack"
+    case home = "home"
+    case pack = "pack"
     case eat, eatFood = "Eat"
-    case drink = "Drink"
-    case shop = "Shop"
-    case stay = "Stay"
-    case explore = "Explore"
+    case drink = "drink"
+    case shop = "shop"
+    case stay = "stay"
+    case explore = "explore"
 }
 
 class ViewRouter: ObservableObject {

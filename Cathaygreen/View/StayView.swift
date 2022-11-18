@@ -31,8 +31,7 @@ struct StayView: View {
 
 struct StayView_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            BackgroundView()
+        BackgroundView {
             StayView()
                 .environmentObject(ViewRouter())
                 .environmentObject(API())
