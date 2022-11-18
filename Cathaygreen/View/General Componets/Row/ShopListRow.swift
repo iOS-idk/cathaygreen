@@ -13,17 +13,22 @@ struct ShopListRow: View {
     var body: some View {
         HStack(spacing: 10) {
             GeometryReader { geo in
-                Image("hotel")
+                Image(shop.name.lowercased())
                     .resizable()
                     .cornerRadius(8)
             }
-            .frame(maxWidth: 130)
-            .scaledToFit()
+            .frame(maxWidth: 130, maxHeight: 200)
+            .scaledToFill()
             
             VStack(alignment: .leading) {
-                Text("15 Miles")
-                    .font(.custom("Helvetica Neue", size: 16))
-                    .foregroundColor(Color.accentColor)
+                HStack {
+                    Image("co2")
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                    Text("15 Miles")
+                        .font(.custom("Helvetica Neue", size: 16))
+                        .foregroundColor(Color.accentColor)
+                }
                 Text(shop.name)
                     .font(.custom("Helvetica Neue Bold", size: 18))
                     .foregroundColor(Color.accentColor)

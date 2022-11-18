@@ -17,7 +17,7 @@ struct MenuGridItemButton: View {
             viewRouter.currentPage = titleType
         } label: {
             VStack {
-                Image(systemName: "hand.wave")
+                Image(titleType.rawValue.lowercased())
                     .resizable()
                     .frame(width: 54, height: 54)
                     .foregroundColor(.green)

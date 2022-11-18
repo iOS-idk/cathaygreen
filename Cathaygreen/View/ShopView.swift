@@ -15,7 +15,7 @@ struct ShopView: View {
         VStack {
             PageHeadingView(name: "SHOP GREENER")
             
-            VStack {
+            VStack(spacing: 20) {
                 ForEach(api.shop, id: \.self) { shop in
                     ShopListRow(shop: shop)
                         .padding([.leading, .trailing], 40)

@@ -27,6 +27,10 @@ struct EatView: View {
             
             nextButton
 
+            Image("co2")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 30, height: 30)
             Text("10 miles reward by choosing greener food.")
                 .font(.custom("Helvetica Neue", size: 16))
                 .foregroundColor(Color.accentColor)

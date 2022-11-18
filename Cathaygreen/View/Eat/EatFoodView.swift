@@ -27,6 +27,10 @@ struct EatFoodView: View {
             }
             
             VStack {
+                Image("co2")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
                 Text("10 miles reward by choosing greener food.")
                     .font(.custom("Helvetica Neue", size: 14))
                     .foregroundColor(Color.accentColor)

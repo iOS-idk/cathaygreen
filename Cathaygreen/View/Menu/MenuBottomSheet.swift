@@ -126,10 +126,9 @@ struct MenuBottomSheet: View {
                     MenuGridItemButton(titleType: .explore)
                     MenuGridItemButton(titleType: .shop)
                 }
-                
             }
             .scrollIndicators(.hidden)
-            .padding()
+            .padding([.leading, .trailing])
         }
     }
 }

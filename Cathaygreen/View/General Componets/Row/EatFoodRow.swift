@@ -13,7 +13,7 @@ struct EatFoodRow: View {
     var body: some View {
         VStack {
             GeometryReader { geo in
-                Image("hotel")
+                Image(eatFood.name.lowercased())
                     .resizable()
                     .cornerRadius(8)
             }

@@ -29,6 +29,10 @@ struct PackView: View {
                 .foregroundColor(Color.accentColor)
             suggestionRectView(numShirts: 5, numPants: 3, numJackets: 1)
             
+            Image("co2")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 30, height: 30)
             Text("20 miles reward per 1kg reductions.")
                 .font(.custom("Helvetica Neue", size: 16))
                 .foregroundColor(Color.accentColor)
@@ -38,10 +42,19 @@ struct PackView: View {
     private func weightRectView(weight: Int) -> some View {
         GeneralRect {
             HStack {
+                GeometryReader { geo in
+                    Image("kg")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geo.size.width * 0.6, height: geo.size.height * 0.6)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
+                .frame(width: 80)
+                .scaledToFit()
+                
                 Text("20 KG")
                     .font(.custom("Helvetica Neue Bold", size: 36))
                     .foregroundColor(Color.accentColor)
-                    .frame(maxWidth: .infinity)
             }
         }
         .padding([.leading, .trailing], 60)
@@ -52,7 +65,17 @@ struct PackView: View {
                 Text(weather)
                     .font(.custom("Helvetica Neue Bold", size: 24))
                     .foregroundColor(Color.accentColor)
-                // Image
+ 
+                GeometryReader { geo in
+                    Image("cloudy")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geo.size.width * 0.6, height: geo.size.height * 0.6)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
+                .frame(width: 80)
+                .scaledToFit()
+                
                 Text(temp)
                     .font(.custom("Helvetica Neue Bold", size: 24))
                     .foregroundColor(Color.accentColor)
@@ -63,13 +86,13 @@ struct PackView: View {
     }
     private func suggestionRectView(numShirts: Int, numPants: Int, numJackets: Int) -> some View {
         GeneralRect {
-            HStack {
+            HStack(spacing: 30) {
                 VStack {
                     Text("\(numShirts)")
                         .font(.custom("Helvetica Neue Bold", size: 24))
                         .foregroundColor(Color.accentColor)
                     Text("SHIRTS")
-                        .font(.custom("Helvetica Neue", size: 24))
+                        .font(.custom("Helvetica Neue", size: 18))
                         .foregroundColor(Color.accentColor)
                 }
                 VStack {
@@ -77,7 +100,7 @@ struct PackView: View {
                         .font(.custom("Helvetica Neue Bold", size: 24))
                         .foregroundColor(Color.accentColor)
                     Text("PANTS")
-                        .font(.custom("Helvetica Neue", size: 24))
+                        .font(.custom("Helvetica Neue", size: 18))
                         .foregroundColor(Color.accentColor)
                 }
                 VStack {
@@ -85,7 +108,7 @@ struct PackView: View {
                         .font(.custom("Helvetica Neue Bold", size: 24))
                         .foregroundColor(Color.accentColor)
                     Text("JACKETS")
-                        .font(.custom("Helvetica Neue", size: 24))
+                        .font(.custom("Helvetica Neue", size: 18))
                         .foregroundColor(Color.accentColor)
                 }
             }

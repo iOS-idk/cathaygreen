@@ -15,6 +15,10 @@ struct HomeView: View {
             ZStack {
                 MileCircle()
                 MileText(mile: 50)
+                Image("co2")
+                    .resizable()
+                    .frame(width: 30, height: 30)
+                    .offset(y: -80)
             }
 
             Text("Next Flight")
@@ -50,28 +54,27 @@ struct HomeView: View {
         Button {
             viewRouter.currentPage = titleType
         } label: {
-            HStack {
-                
-                Image(systemName: "trash")
-                    .resizable()
-                    .frame(width: 54, height: 54)
-                    .foregroundColor(.green)
-                
-                VStack {
-                    Text("\(titleType.rawValue.uppercased()) GREENER")
-                        .font(.custom("Helvetica Neue Bold", size: 26))
-                        .foregroundColor(Color.accentColor)
-                    Text(description)
-                        .font(.custom("Helvetica Neue", size: 13))
-                        .foregroundColor(Color.accentColor)
+
+            GeneralRect {
+                HStack(spacing: 20) {
+                    Image(titleType.rawValue.lowercased())
+                        .resizable()
+                        .frame(width: 54, height: 54)
+                    
+                    VStack(alignment: .leading) {
+                        Text("\(titleType.rawValue.uppercased()) GREENER")
+                            .font(.custom("Helvetica Neue Bold", size: 26))
+                            .foregroundColor(Color.accentColor)
+                        Text(description)
+                            .font(.custom("Helvetica Neue", size: 13))
+                            .foregroundColor(Color.accentColor)
+                    }
                 }
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading, 40)
             }
+            .padding([.leading, .trailing], 10)
         }
-        .tint(.white)
-        .controlSize(.large)
-        .buttonStyle(.borderedProminent)
-        .padding([.leading, .trailing], 10)
     }
     
 }

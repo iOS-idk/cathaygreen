@@ -25,6 +25,9 @@ struct DrinkView: View {
                 rewardsRect()
             }
             
+            Image("co2")
+                .resizable()
+                .frame(width: 30, height: 30)
             Text("10 miles reward per use.")
                 .font(.custom("Helvetica Neue Bold", size: 16))
                 .foregroundColor(Color.accentColor)
