@@ -9,14 +9,33 @@ import SwiftUI
 
 struct StayView: View {
     @EnvironmentObject var viewRouter: ViewRouter
+    @EnvironmentObject var api: API
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            PageHeadingView(name: "STAY GREENER")
+            
+            VStack {
+                ForEach(api.stay, id: \.self) { stay in
+                    StayExplortRow(stayExplore: stay)
+                        .padding([.leading, .trailing], 40)
+                }
+            }
+
+        }
+        .task {
+            try? await api.fetchAllStay()
+        }
     }
 }
 
 struct StayView_Previews: PreviewProvider {
     static var previews: some View {
-        StayView().environmentObject(ViewRouter())
+        ZStack {
+            BackgroundView()
+            StayView()
+                .environmentObject(ViewRouter())
+                .environmentObject(API())
+        }
     }
 }

@@ -8,22 +8,39 @@
 import SwiftUI
 
 struct ShopListRow: View {
-    let name: String
-    let description: String
+    let shop: Shop
     
     var body: some View {
-        HStack {
-            // Image
-            VStack {
-                Text(name)
-                    .font(.custom("Helvetica Neue Bold", size: 24))
+        HStack(spacing: 10) {
+            GeometryReader { geo in
+                Image("hotel")
+                    .resizable()
+                    .cornerRadius(8)
+            }
+            .frame(maxWidth: 130)
+            .scaledToFit()
+            
+            VStack(alignment: .leading) {
+                Text("15 Miles")
+                    .font(.custom("Helvetica Neue", size: 16))
                     .foregroundColor(Color.accentColor)
-                Text(description)
-                    .font(.custom("Helvetica Neue", size: 24))
+                Text(shop.name)
+                    .font(.custom("Helvetica Neue Bold", size: 18))
+                    .foregroundColor(Color.accentColor)
+                Text(shop.description)
+                    .font(.custom("Helvetica Neue", size: 16))
                     .foregroundColor(Color.accentColor)
                 
-                RoundButton(title: "Reserve", cornerRadius: 16)
+                HStack {
+                    Spacer()
+                    Text("HKD \(shop.price)")
+                        .font(.custom("Helvetica Neue Bold", size: 16))
+                        .foregroundColor(Color.accentColor)
+                }
+                
+                RoundButton(title: "Buy", cornerRadius: 16)
             }
+            
         }
 
     }
@@ -31,6 +48,6 @@ struct ShopListRow: View {
 
 struct ShopListRow_Previews: PreviewProvider {
     static var previews: some View {
-        ShopListRow(name: "Ecological Compound", description: "Sisley")
+        ShopListRow(shop: Shop(name: "Ecological Compound", description: "Sisley", price: 1532, mile: 15))
     }
 }

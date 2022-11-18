@@ -9,11 +9,15 @@ import SwiftUI
 
 @main
 struct CathaygreenApp: App {
+    
     @StateObject var viewRouter = ViewRouter()
+    @StateObject var api = API()
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(viewRouter)
+            ContentView()
+                .environmentObject(viewRouter)
+                .environmentObject(api)
         }
     }
 }

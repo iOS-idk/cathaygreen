@@ -74,7 +74,7 @@ struct MenuBottomSheet: View {
             }
             
             Text("Explorer more")
-                .font(.custom("Helvetica Neue Bold", size: 20))
+                .font(.custom("Helvetica Neue Bold", size: 26))
                 .foregroundColor(.accentColor)
             
             if !isLarge {
@@ -105,27 +105,26 @@ struct MenuBottomSheet: View {
         VStack {
             Divider()
             ScrollView {
-                
                 Text("Before flight")
                     .font(.custom("Helvetica Neue Bold", size: 20))
                     .foregroundColor(Color.accentColor)
-                MenuGridRow(titleType: .pack)
+                MenuGridItemButton(titleType: .pack)
                 
                 Text("In-flight")
                     .font(.custom("Helvetica Neue Bold", size: 20))
                     .foregroundColor(Color.accentColor)
                 LazyVGrid(columns: twoColumnGrid) {
-                    MenuGridRow(titleType: .eat)
-                    MenuGridRow(titleType: .drink)
+                    MenuGridItemButton(titleType: .eat)
+                    MenuGridItemButton(titleType: .drink)
                 }
                 
                 Text("Anytime")
                     .font(.custom("Helvetica Neue Bold", size: 20))
                     .foregroundColor(Color.accentColor)
                 LazyVGrid(columns: twoColumnGrid) {
-                    MenuGridRow(titleType: .stay)
-                    MenuGridRow(titleType: .explore)
-                    MenuGridRow(titleType: .shop)
+                    MenuGridItemButton(titleType: .stay)
+                    MenuGridItemButton(titleType: .explore)
+                    MenuGridItemButton(titleType: .shop)
                 }
                 
             }

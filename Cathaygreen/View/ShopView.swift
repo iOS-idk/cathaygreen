@@ -9,14 +9,33 @@ import SwiftUI
 
 struct ShopView: View {
     @EnvironmentObject var viewRouter: ViewRouter
+    @EnvironmentObject var api: API
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            PageHeadingView(name: "SHOP GREENER")
+            
+            VStack {
+                ForEach(api.shop, id: \.self) { shop in
+                    ShopListRow(shop: shop)
+                        .padding([.leading, .trailing], 40)
+                }
+            }
+
+        }
+        .task {
+            try? await api.fetchAllShop()
+        }
     }
 }
 
 struct ShopView_Previews: PreviewProvider {
     static var previews: some View {
-        ShopView().environmentObject(ViewRouter())
+        ZStack {
+            BackgroundView()
+            ShopView()
+                .environmentObject(ViewRouter())
+                .environmentObject(API())
+        }
     }
 }

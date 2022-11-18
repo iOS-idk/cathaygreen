@@ -10,7 +10,7 @@ import SwiftUI
 enum Page: String {
     case home = "Home"
     case pack = "Pack"
-    case eat = "Eat"
+    case eat, eatFood = "Eat"
     case drink = "Drink"
     case shop = "Shop"
     case stay = "Stay"

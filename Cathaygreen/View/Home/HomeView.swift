@@ -23,11 +23,13 @@ struct HomeView: View {
             
             HStack {
                 RoundButton(title: "HKG", cornerRadius: 16)
-                
-                
+       
+                RoundButton(title: "HKG", cornerRadius: 16)
                 
                 RoundButton(title: "LHR", cornerRadius: 16)
+                  
             }
+            .padding([.leading, .trailing], 80)
             
             Text("9 hours")
                 .font(.custom("Helvetica Neue Bold", size: 16))

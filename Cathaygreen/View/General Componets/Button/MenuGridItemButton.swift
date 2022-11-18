@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MenuGridRow: View {
+struct MenuGridItemButton: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
     let titleType: Page
@@ -41,7 +41,7 @@ struct MenuGridRow_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.gray.ignoresSafeArea()
-            MenuGridRow(titleType: .pack)
+            MenuGridItemButton(titleType: .pack)
         }
     }
 }

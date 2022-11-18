@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct PageLogoView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Spacer()
+            Image("hotel")
+                .resizable()
+            Spacer()
+        }
     }
 }
 
 struct PageLogo_Previews: PreviewProvider {
     static var previews: some View {
-        PageLogoView()
+        PageLogoView().environmentObject(ViewRouter())
     }
 }

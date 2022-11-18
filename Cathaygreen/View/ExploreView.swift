@@ -9,14 +9,33 @@ import SwiftUI
 
 struct ExploreView: View {
     @EnvironmentObject var viewRouter: ViewRouter
+    @EnvironmentObject var api: API
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            PageHeadingView(name: "EXPLORE GREENER")
+            
+            VStack {
+                ForEach(api.explore, id: \.self) { explore in
+                    StayExplortRow(stayExplore: explore)
+                        .padding([.leading, .trailing], 40)
+                }
+            }
+
+        }
+        .task {
+            try? await api.fetchAllExplore()
+        }
     }
 }
 
 struct ExploreView_Previews: PreviewProvider {
     static var previews: some View {
-        ExploreView().environmentObject(ViewRouter())
+        ZStack {
+            BackgroundView()
+            ExploreView()
+                .environmentObject(ViewRouter())
+                .environmentObject(API())
+        }
     }
 }

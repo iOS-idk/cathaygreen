@@ -21,8 +21,9 @@ struct EatView: View {
                 .foregroundColor(Color.accentColor)
             
             RadioButtonGroups { selected in
-                print("Selected Gender is: \(selected)")
-            }.padding()
+                print("Selected: \(selected)")
+            }
+            .padding([.leading, .trailing])
             
             nextButton
 

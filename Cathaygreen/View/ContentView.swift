@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+
     @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
@@ -16,20 +16,14 @@ struct ContentView: View {
             BackgroundView()
             
             switch viewRouter.currentPage {
-            case .home:
-                HomeView()
-            case .pack:
-                PackView()
-            case .eat:
-                EatView()
-            case .drink:
-                DrinkView()
-            case .shop:
-                ShopView()
-            case .stay:
-                StayView()
-            case .explore:
-                ExploreView()
+            case .home: HomeView()
+            case .pack: PackView()
+            case .eat: EatView()
+            case .eatFood: EatFoodView()
+            case .drink: DrinkView()
+            case .shop: ShopView()
+            case .stay: StayView()
+            case .explore: ExploreView()
             }
             
             MenuBottomSheet()

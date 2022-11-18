@@ -16,13 +16,13 @@ struct RoundButton: View {
             
         } label: {
             Text(title)
-                .padding()
-                .padding([.leading, .trailing], 10)
-                .font(.custom("Helvetica Neue Bold", size: 26))
-                .foregroundColor(.white)
-                .background(Color.accentColor)
-                .cornerRadius(cornerRadius)
+                .padding([.top, .bottom], 5)
+                .font(.custom("Helvetica Neue Bold", size: 20))
+                .frame(maxWidth: .infinity)
         }
+        .cornerRadius(cornerRadius)
+        .tint(Color.accentColor)
+        .buttonStyle(.borderedProminent)
     }
 }
 
