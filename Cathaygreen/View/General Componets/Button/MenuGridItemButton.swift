@@ -9,12 +9,14 @@ import SwiftUI
 
 struct MenuGridItemButton: View {
     @EnvironmentObject var viewRouter: ViewRouter
+    @EnvironmentObject var bottomSheetLevel: BottomSheetLevel
     
     let titleType: Page
     
     var body: some View {
         Button {
             viewRouter.currentPage = titleType
+            bottomSheetLevel.bottomSheetPosition = .relative(0.1)
         } label: {
             VStack {
                 Image(titleType.rawValue.lowercased())

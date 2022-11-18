@@ -8,15 +8,18 @@
 import SwiftUI
 import BottomSheet
 
+class BottomSheetLevel: ObservableObject {
+    @Published var bottomSheetPosition: BottomSheetPosition = .relative(0.1)
+}
+
 struct MenuBottomSheet: View {
     @EnvironmentObject var viewRouter: ViewRouter
+    @EnvironmentObject var bottomSheetLevel: BottomSheetLevel
     
     private let twoColumnGrid = Array(repeating: GridItem(.flexible()), count: 2)
-    
-    @State var bottomSheetPosition: BottomSheetPosition = .relative(0.1)
 
     private var isLarge: Bool {
-        return bottomSheetPosition == .relative(1) ? true : false
+        return bottomSheetLevel.bottomSheetPosition == .relative(1) ? true : false
     }
     
     private var backgroundColor: Color {
@@ -27,7 +30,7 @@ struct MenuBottomSheet: View {
         ZStack {
             
         }
-        .bottomSheet(bottomSheetPosition: $bottomSheetPosition, switchablePositions: [.relative(0.1), .relative(1)]) {
+        .bottomSheet(bottomSheetPosition: $bottomSheetLevel.bottomSheetPosition, switchablePositions: [.relative(0.1), .relative(1)]) {
             VStack {
                 smallMenuSheet()
                 if isLarge {
@@ -50,7 +53,7 @@ struct MenuBottomSheet: View {
                 .foregroundColor(isLarge ? .accentColor : .white)
             if !isLarge {
                 Button {
-                    bottomSheetPosition = .relative(1)
+                    bottomSheetLevel.bottomSheetPosition = .relative(1)
                 } label: {
                     Image(systemName: "arrow.up.circle.fill")
                         .font(.system(size: 30))
@@ -79,7 +82,7 @@ struct MenuBottomSheet: View {
             
             if !isLarge {
                 Button {
-                    bottomSheetPosition = .relative(1)
+                    bottomSheetLevel.bottomSheetPosition = .relative(1)
                 } label: {
                     Image(systemName: "arrow.up")
                         .padding()
@@ -136,7 +139,9 @@ struct MenuBottomSheet: View {
 struct MenuBottomSheet_Previews: PreviewProvider {
     static var previews: some View {
         BackgroundView {
-            MenuBottomSheet().environmentObject(ViewRouter())
+            MenuBottomSheet()
+                .environmentObject(ViewRouter())
+                .environmentObject(BottomSheetLevel())
         }
     }
 }
