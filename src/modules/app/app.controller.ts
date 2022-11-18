@@ -1,11 +1,6 @@
-import { Controller, Get } from '@nestjs/common';
-import {
-  ApiBadRequestResponse,
-  ApiOkResponse,
-  ApiOperation,
-  ApiTags,
-} from '@nestjs/swagger';
+import { ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { AppService } from './app.service';
+import { Controller, Get } from '@nestjs/common';
 import { VersionRes } from './dto';
 
 @ApiTags('System')

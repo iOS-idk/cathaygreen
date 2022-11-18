@@ -3,5 +3,6 @@ export enum RecordType {
   DRINK = 'drink',
   STAY = 'stay',
   EXPLORE = 'explore',
+  SHOP = 'shop',
   EAT = 'eat',
 }

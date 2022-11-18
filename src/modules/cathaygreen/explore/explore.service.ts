@@ -1,24 +1,25 @@
-import { CreateStayDto } from './dto/create-stay.dto';
+import { CreateExploreDto } from './dto/create-explore.dto';
+import { Explore } from './entities/explore.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Injectable } from '@nestjs/common';
 import { RecordService } from '../record/record.service';
 import { RecordType } from '../enums';
 import { Repository } from 'typeorm';
-import { Stay } from './entities/stay.entity';
 
 @Injectable()
-export class StayService {
+export class ExploreService {
   constructor(
-    @InjectRepository(Stay)
-    private stayRepo: Repository<Stay>,
+    @InjectRepository(Explore)
+    private exploreRepo: Repository<Explore>,
+
     private readonly recordService: RecordService,
   ) {}
 
-  private recordType = RecordType.STAY;
+  private recordType = RecordType.EXPLORE;
 
-  create(createStayDto: CreateStayDto): Promise<Stay> {
-    const stay = this.stayRepo.create(createStayDto);
-    return this.stayRepo.save(stay);
+  create(createExploreDto: CreateExploreDto): Promise<Explore> {
+    const explore = this.exploreRepo.create(createExploreDto);
+    return this.exploreRepo.save(explore);
   }
 
   async findAllRecords() {
@@ -26,11 +27,11 @@ export class StayService {
   }
 
   async reserve(id: number) {
-    const stay = await this.stayRepo.findOneBy({ id });
+    const explore = await this.exploreRepo.findOneBy({ id });
     const record = this.recordService.create({
       type: this.recordType,
-      refId: stay.id,
-      mile: stay.mile,
+      refId: explore.id,
+      mile: explore.mile,
     });
     return record;
   }

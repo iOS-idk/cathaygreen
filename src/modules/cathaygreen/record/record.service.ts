@@ -23,4 +23,12 @@ export class RecordService {
 
     return records;
   }
+
+  async getScore(): Promise<number> {
+    const records = await this.recordRepo.find();
+    // Sum all records of miles
+    const score = records.reduce((acc, record) => acc + record.mile, 0);
+
+    return score;
+  }
 }

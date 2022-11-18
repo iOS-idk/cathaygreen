@@ -7,7 +7,7 @@ import {
 } from 'typeorm';
 
 @Entity()
-export class Stay {
+export class Explore {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -16,12 +16,6 @@ export class Stay {
 
   @Column({ nullable: true })
   description: string;
-
-  @Column({ type: 'int', default: 1000 })
-  price: number;
-
-  @Column()
-  location: string;
 
   @Column({ type: 'varchar', length: 1000, nullable: true })
   image: string;

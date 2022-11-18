@@ -1,26 +1,16 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsNumber, IsOptional, IsString } from 'class-validator';
 
-export class CreateStayDto {
+export class CreateShopDto {
   @IsString()
   @IsNotEmpty()
   @ApiProperty()
   name: string;
 
   @IsString()
-  @IsOptional()
-  @ApiProperty()
-  description: string;
-
-  @IsNumber()
-  @IsOptional()
-  @ApiProperty()
-  price: number;
-
-  @IsString()
   @IsNotEmpty()
   @ApiProperty()
-  location: string;
+  brand: string;
 
   @IsString()
   @IsOptional()
@@ -31,4 +21,9 @@ export class CreateStayDto {
   @IsOptional()
   @ApiProperty()
   mile: number;
+
+  @IsNumber()
+  @IsOptional()
+  @ApiProperty()
+  price: number;
 }

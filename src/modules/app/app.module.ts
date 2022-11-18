@@ -1,12 +1,12 @@
-import { ResponseInterceptor } from '@/interceptors/response.interceptor';
-import { Module, ValidationError, ValidationPipe } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
-import { APP_PIPE, APP_INTERCEPTOR } from '@nestjs/core';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { CathaygreenModule } from '@mod/cathaygreen/cathaygreen.module';
+import { APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
 import { AppConfig } from './app.config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { CathaygreenModule } from '@mod/cathaygreen/cathaygreen.module';
+import { ConfigModule } from '@nestjs/config';
+import { Module, ValidationError, ValidationPipe } from '@nestjs/common';
+import { ResponseInterceptor } from '@/interceptors/response.interceptor';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [
