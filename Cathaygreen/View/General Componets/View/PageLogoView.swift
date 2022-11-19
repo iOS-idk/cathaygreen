@@ -11,17 +11,33 @@ struct PageLogoView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
     var body: some View {
-        HStack {
-            Spacer()
-            Image("hotel")
+        if viewRouter.currentPage == .home {
+            Image("logo")
                 .resizable()
-            Spacer()
+                .scaledToFit()
+                .frame(width: 200)
+            
+        } else {
+            HStack {
+                Image("logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 140)
+                
+                Spacer()
+                
+                Image(viewRouter.currentPage.rawValue.lowercased())
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 80)
+            }
         }
     }
 }
 
 struct PageLogo_Previews: PreviewProvider {
     static var previews: some View {
-        PageLogoView().environmentObject(ViewRouter())
+        PageLogoView()
+            .environmentObject(ViewRouter())
     }
 }

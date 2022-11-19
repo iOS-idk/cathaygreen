@@ -15,7 +15,7 @@ struct ExploreView: View {
         VStack {
             PageHeadingView(name: "EXPLORE GREENER")
             
-            VStack {
+            ScrollView {
                 ForEach(api.explore, id: \.self) { explore in
                     StayExplortRow(stayExplore: explore)
                         .padding([.leading, .trailing], 40)

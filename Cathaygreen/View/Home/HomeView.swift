@@ -47,7 +47,6 @@ struct HomeView: View {
             
             imageTextButton(titleType: .eat, description: "See greener food suggestions.")
         }
-        .padding(.top, 30)
     }
 
     private func imageTextButton(titleType: Page, description: String) -> some View {

@@ -11,7 +11,7 @@ struct StayExplortRow: View {
     let stayExplore: StayExplore
     
     var body: some View {
-        VStack(spacing: -30) {
+        VStack(spacing: -20) {
             GeometryReader { geo in
                 Image(stayExplore.name.lowercased())
                     .resizable()
@@ -35,21 +35,18 @@ struct StayExplortRow: View {
                 VStack(alignment: .trailing) {
                     RoundButton(title: "Reserve", cornerRadius: 20)
                    
-                    
                     HStack {
                         Image("co2")
                             .resizable()
-                            .frame(width: 30, height: 30)
+                            .frame(width: 20, height: 20)
                         Text("\(stayExplore.mile) Miles")
                             .font(.custom("Helvetica Neue", size: 16))
                             .foregroundColor(Color.accentColor)
-                          
                     }
-                    .padding(.bottom, 20)
+          
                 }
                 .frame(maxWidth: 130)
             }
-          
         }
     }
 }

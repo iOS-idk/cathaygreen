@@ -19,6 +19,7 @@ struct DrinkView: View {
             HStack {
                 
                 RoundButton(title: "Buy reusable mug", cornerRadius: 30)
+                    
             }
             
             ForEach((1...numRewards), id: \.self) { _ in

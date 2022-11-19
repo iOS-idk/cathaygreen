@@ -15,7 +15,7 @@ struct StayView: View {
         VStack {
             PageHeadingView(name: "STAY GREENER")
             
-            VStack {
+            ScrollView {
                 ForEach(api.stay, id: \.self) { stay in
                     StayExplortRow(stayExplore: stay)
                         .padding([.leading, .trailing], 40)
