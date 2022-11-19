@@ -45,9 +45,12 @@ struct HomeView: View {
                 .font(.custom("Helvetica Neue Bold", size: 16))
                 .foregroundColor(Color.accentColor)
             
-            imageTextButton(titleType: .pack, description: "Reduce fossil fuel with lighter belongings.")
-            
-            imageTextButton(titleType: .eat, description: "See greener food suggestions.")
+            ScrollView {
+                imageTextButton(titleType: .pack, description: "Reduce fossil fuel with lighter belongings.")
+                
+                imageTextButton(titleType: .eat, description: "See greener food suggestions.")
+            }
+            .scrollIndicators(.hidden)
         }
     }
 
@@ -55,7 +58,6 @@ struct HomeView: View {
         Button {
             viewRouter.currentPage = titleType
         } label: {
-
             GeneralRect {
                 HStack(spacing: 20) {
                     Image(titleType.rawValue.lowercased())

@@ -18,7 +18,7 @@ struct RoundButton: View {
         } label: {
             Text(title)
                 .padding([.top, .bottom], 5)
-                .font(.custom("Helvetica Neue Bold", size: 20))
+                .font(.custom("Helvetica Neue Bold", size: 18))
                 .frame(maxWidth: .infinity)
                 .padding(EdgeInsets(top: textPadding, leading: textPadding, bottom: textPadding, trailing: textPadding))
         }
