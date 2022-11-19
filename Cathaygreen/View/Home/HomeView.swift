@@ -27,8 +27,10 @@ struct HomeView: View {
             
             HStack {
                 RoundButton(title: "HKG", cornerRadius: 16)
-       
-                RoundButton(title: "HKG", cornerRadius: 16)
+                
+                Image("arrow right")
+                    .resizable()
+                    .scaledToFit()
                 
                 RoundButton(title: "LHR", cornerRadius: 16)
                   
