@@ -13,6 +13,6 @@ export default new DataSource({
   username: DB_USERNAME,
   password: DB_PASSWORD,
   database: DB_NAME,
-  entities: ['src/modules/**/*.entity.{ts,js}'],
+  entities: [__dirname + '/../modules/**/*.entity.{ts,js}'],
   migrations: ['src/database/migrations/*.{ts,js}'],
 });
