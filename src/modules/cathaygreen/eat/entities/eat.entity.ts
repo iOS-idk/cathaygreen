@@ -15,7 +15,7 @@ export class Eat {
   @Column({ type: 'varchar', length: 255 })
   name: string;
 
-  @Column({ enum: Meal })
+  @Column({ type: 'enum', enum: Meal })
   meal: Meal;
 
   @Column({ type: 'varchar', length: 1000, nullable: true })
