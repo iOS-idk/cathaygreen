@@ -30,7 +30,7 @@ struct MileText: View {
                     .foregroundColor(Color.accentColor)
             }
 
-            Text("ASIA MILES")
+            Text("MILES")
                 .font(.custom("Helvetica Neue Bold", size: 20))
                 .foregroundColor(Color.accentColor)
         }
