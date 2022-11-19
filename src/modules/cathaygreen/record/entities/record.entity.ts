@@ -11,7 +11,7 @@ export class Record {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ enum: RecordType })
+  @Column({ type: 'enum', enum: RecordType })
   type: RecordType;
 
   @Column({ type: 'int', default: 0 })
