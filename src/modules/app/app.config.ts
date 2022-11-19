@@ -75,7 +75,7 @@ export class AppConfig {
           synchronize: NODE_ENV === NodeEnv.LOCAL,
           // entities: ['src/modules/**/*.entity.{ts,js}'],
           // migrations: ['src/database/migrations/*.migration.{ts,js}'],
-          entities: [path.join(__dirname, 'modules/**/*.entity.{ts,js}')],
+          entities: [path.join(__dirname, '../modules/**/*.entity.{ts,js}')],
           migrations: [
             path.join(__dirname, migrationsDir, '*.migration.{ts,js}'),
           ],

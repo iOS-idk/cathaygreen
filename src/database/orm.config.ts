@@ -1,9 +1,4 @@
 import { DataSource } from 'typeorm';
-import { Eat } from '@/modules/cathaygreen/eat/entities/eat.entity';
-import { Explore } from '@/modules/cathaygreen/explore/entities/explore.entity';
-import { Record } from '@/modules/cathaygreen/record/entities/record.entity';
-import { Shop } from '@/modules/cathaygreen/shop/entities/shop.entity';
-import { Stay } from '@/modules/cathaygreen/stay/entities/stay.entity';
 import { config } from 'dotenv';
 
 config();
@@ -18,6 +13,6 @@ export default new DataSource({
   username: DB_USERNAME,
   password: DB_PASSWORD,
   database: DB_NAME,
-  entities: [Record, Stay, Explore, Shop, Eat],
+  entities: ['src/modules/**/*.entity.{ts,js}'],
   migrations: ['src/database/migrations/*.{ts,js}'],
 });
