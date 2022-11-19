@@ -23,6 +23,7 @@ struct GeneralRect<Content: View>: View {
             
             content
         }
+        .padding([.leading, .trailing], 10)
     }
 }
 

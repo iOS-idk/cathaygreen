@@ -16,11 +16,18 @@ struct DrinkView: View {
         VStack {
             PageHeadingView(name: "DRINK GREENER")
             
-            HStack {
+            ZStack {
+                RoundButton(title: "Buy reusable mug", cornerRadius: 30, textPadding: 8).padding([.leading, .trailing], 50)
                 
-                RoundButton(title: "Buy reusable mug", cornerRadius: 30)
-                    
+                Image("drink")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .offset(x: -120, y: -15)
             }
+            
+            Text("REWARDS")
+                .font(.custom("Helvetica Neue Bold", size: 16))
+                .foregroundColor(Color.accentColor)
             
             ForEach((1...numRewards), id: \.self) { _ in
                 rewardsRect()
@@ -30,7 +37,7 @@ struct DrinkView: View {
                 .resizable()
                 .frame(width: 30, height: 30)
             Text("10 miles reward per use.")
-                .font(.custom("Helvetica Neue Bold", size: 16))
+                .font(.custom("Helvetica Neue", size: 16))
                 .foregroundColor(Color.accentColor)
         }
     }
@@ -41,14 +48,15 @@ struct DrinkView: View {
                 Text("10 min ago")
                     .font(.custom("Helvetica Neue Bold", size: 16))
                     .foregroundColor(Color.accentColor)
-                    .padding(.leading, 30)
                 
                 Spacer()
                 
                 VStack {
-                    MileText(mile: 20)
+                    MileText(mile: 20, textSize: 40)
                 }
+            
             }
+            .padding([.leading, .trailing], 30)
         }
     }
 }

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MileText: View {
-    @State var mile: Int
+    var mile: Int
+    var textSize: CGFloat = 75
     
     var body: some View {
         VStack {
@@ -26,7 +27,7 @@ struct MileText: View {
                 }
                 
                 Text("\(mile)")
-                    .font(.custom("Helvetica Neue Bold", size: 75))
+                    .font(.custom("Helvetica Neue Bold", size: textSize))
                     .foregroundColor(Color.accentColor)
             }
 

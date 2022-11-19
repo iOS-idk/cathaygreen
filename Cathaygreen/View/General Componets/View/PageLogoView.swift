@@ -29,7 +29,7 @@ struct PageLogoView: View {
                 Image(viewRouter.currentPage.rawValue.lowercased())
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 80)
+                    .frame(width: 70)
             }
         }
     }
