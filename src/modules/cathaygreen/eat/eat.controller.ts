@@ -14,6 +14,11 @@ export class EatController {
     return this.eatService.create(createEatDto);
   }
 
+  @Get()
+  findAll() {
+    return this.eatService.findAll();
+  }
+
   @Get('records')
   findAllRecords() {
     return this.eatService.findAllRecords();

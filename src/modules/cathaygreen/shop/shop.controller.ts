@@ -13,6 +13,10 @@ export class ShopController {
     return this.shopService.create(createShopDto);
   }
 
+  @Get()
+  findAll() {
+    return this.shopService.findAll();
+  }
   @Get('records')
   findAllRecords() {
     return this.shopService.findAllRecords();

@@ -21,6 +21,11 @@ export class StayService {
     return this.stayRepo.save(stay);
   }
 
+  async findAll() {
+    const stays = await this.stayRepo.find();
+    return stays;
+  }
+
   async findAllRecords() {
     return this.recordService.findAll(this.recordType);
   }

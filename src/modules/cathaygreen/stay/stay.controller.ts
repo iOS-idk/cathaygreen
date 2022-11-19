@@ -14,6 +14,11 @@ export class StayController {
     return this.stayService.create(createStayDto);
   }
 
+  @Get()
+  findAll() {
+    return this.stayService.findAll();
+  }
+
   @Get('records')
   findAllRecords(): Promise<Record[]> {
     return this.stayService.findAllRecords();

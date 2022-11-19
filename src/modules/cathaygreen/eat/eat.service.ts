@@ -20,6 +20,11 @@ export class EatService {
     return this.eatRepo.save(eat);
   }
 
+  async findAll() {
+    const eats = await this.eatRepo.find();
+    return eats;
+  }
+
   async findAllRecords() {
     return this.recordService.findAll(this.recordType);
   }

@@ -22,6 +22,11 @@ export class ExploreService {
     return this.exploreRepo.save(explore);
   }
 
+  async findAll() {
+    const explores = await this.exploreRepo.find();
+    return explores;
+  }
+
   async findAllRecords() {
     return this.recordService.findAll(this.recordType);
   }

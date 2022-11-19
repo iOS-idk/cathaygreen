@@ -13,6 +13,11 @@ export class ExploreController {
     return this.exploreService.create(createExploreDto);
   }
 
+  @Get()
+  findAll() {
+    return this.exploreService.findAll();
+  }
+
   @Get('records')
   findAllRecords() {
     return this.exploreService.findAllRecords();

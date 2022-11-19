@@ -21,6 +21,11 @@ export class ShopService {
     return this.shopRepo.save(shop);
   }
 
+  async findAll() {
+    const shops = await this.shopRepo.find();
+    return shops;
+  }
+
   async findAllRecords() {
     return this.recordService.findAll(this.recordType);
   }
