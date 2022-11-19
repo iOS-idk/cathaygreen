@@ -27,9 +27,7 @@ struct MileText: View {
                 
                 Text("\(mile)")
                     .font(.custom("Helvetica Neue Bold", size: 75))
-            
                     .foregroundColor(Color.accentColor)
-                
             }
 
             Text("ASIA MILES")

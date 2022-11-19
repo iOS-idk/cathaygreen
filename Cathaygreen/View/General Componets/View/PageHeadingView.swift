@@ -14,6 +14,7 @@ struct PageHeadingView: View {
         GeneralRect {
             HeadingText(name: name)
         }
+        .padding([.leading, .trailing], 10)
     }
 }
 
