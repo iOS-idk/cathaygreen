@@ -24,7 +24,8 @@
     "migration:generate": "npm run typeorm:cli migration:generate ./src/database/migrations/$npm_config_name",
     "migration:create": "pnpm typeorm:cli migration:create",
     "migration:run": "pnpm typeorm:cli migration:run",
-    "migration:revert": "pnpm typeorm:cli migration:revert"
+    "migration:revert": "pnpm typeorm:cli migration:revert",
+    "aws:deploy": "rsync -ruP -e 'ssh -i /Users/johnsmacbook/Documents/Cathay_Green.pem' dist/. ubuntu@13.214.219.65:~/cathaygreen-api"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
@@ -43,6 +44,11 @@
     "joi": "^17.7.0",
     "mysql2": "^2.3.3",
     "path": "^0.12.7",
+    "puppeteer": "^17.1.0",
+    "puppeteer-extra": "^3.3.4",
+    "puppeteer-extra-plugin-adblocker": "^2.13.5",
+    "puppeteer-extra-plugin-block-resources": "^2.4.2",
+    "puppeteer-extra-plugin-stealth": "^2.11.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
