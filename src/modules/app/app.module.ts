@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { CathaygreenModule } from '@mod/cathaygreen/cathaygreen.module';
 import { ConfigModule } from '@nestjs/config';
 import { Module, ValidationError, ValidationPipe } from '@nestjs/common';
+import { PuppeteerModule } from '../puppeteer';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
@@ -13,6 +14,11 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     ConfigModule.forRoot(AppConfig.getInitConifg()),
     // Database Module
     TypeOrmModule.forRootAsync(AppConfig.getTypeOrmConfig()),
+
+    PuppeteerModule.forWorker(
+      { pipe: false, headless: true }, // optional, any Puppeteer launch options here or leave empty for good defaults */,
+      `Browser-1`, // optional, can be useful for using Chrome and Firefox in the same project
+    ),
     // Other Modules
     CathaygreenModule,
   ],

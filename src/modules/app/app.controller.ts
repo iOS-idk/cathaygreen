@@ -40,4 +40,9 @@ export class AppController {
   healthz(): string {
     return this.appService.healthz();
   }
+
+  @Get('bot')
+  bot() {
+    return this.appService.bot();
+  }
 }
