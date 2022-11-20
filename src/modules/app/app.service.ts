@@ -21,7 +21,7 @@ export class AppService {
   }
 
   public async bot() {
-    for (let i = 0; i < 50; i += 1) {
+    for (let i = 0; i < 873; i += 1) {
       const page = await this.worker.getPage(`cathay-worker-${i}`);
       const response = await page.goto(
         'https://cathaypacific.formstack.com/forms/cathayhackathon2022_mostpopularsolutionawardvote',
@@ -32,7 +32,7 @@ export class AppService {
 
       // click submit button class is "fsNextButton"
       await page.click('.fsSubmitButton');
-      this.logger.debug('cathay success', i);
+      this.logger.debug('cathay success: ' + i);
     }
     return 'OK';
   }
