@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EatFoodRow: View {
-    let eatFood: EatFood
+    let eatFood: Eat
     
     var body: some View {
         VStack {
@@ -30,6 +30,6 @@ struct EatFoodRow: View {
 
 struct EatFoodRow_Previews: PreviewProvider {
     static var previews: some View {
-        EatFoodRow(eatFood: EatFood(name: "Vegetarian Lacto-Ovo Meal"))
+        EatFoodRow(eatFood: Eat(name: "Vegetarian Lacto-Ovo Meal"))
     }
 }

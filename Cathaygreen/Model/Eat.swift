@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct EatFood: Codable, Hashable {
+struct Eat: Codable, Hashable {
     let name: String
 }

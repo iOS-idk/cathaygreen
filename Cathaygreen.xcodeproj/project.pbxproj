@@ -40,7 +40,7 @@
 		0462F3702927856D0005594F /* View+CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462F36F2927856D0005594F /* View+CornerRadiusStyle.swift */; };
 		0462F37329278AB90005594F /* EatFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462F37229278AB90005594F /* EatFoodView.swift */; };
 		0462F37529278E870005594F /* EatFoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462F37429278E870005594F /* EatFoodRow.swift */; };
-		0462F37729278F500005594F /* EatFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462F37629278F500005594F /* EatFood.swift */; };
+		0462F37729278F500005594F /* Eat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0462F37629278F500005594F /* Eat.swift */; };
 		04C2A8072923C7EC006BFFD6 /* Color+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A8062923C7EC006BFFD6 /* Color+Assets.swift */; };
 		04C2A80E2923CC26006BFFD6 /* GeneralRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A80D2923CC26006BFFD6 /* GeneralRect.swift */; };
 		04C2A8122923CE13006BFFD6 /* MileCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C2A8112923CE13006BFFD6 /* MileCircle.swift */; };
@@ -101,7 +101,7 @@
 		0462F36F2927856D0005594F /* View+CornerRadiusStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CornerRadiusStyle.swift"; sourceTree = "<group>"; };
 		0462F37229278AB90005594F /* EatFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatFoodView.swift; sourceTree = "<group>"; };
 		0462F37429278E870005594F /* EatFoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatFoodRow.swift; sourceTree = "<group>"; };
-		0462F37629278F500005594F /* EatFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EatFood.swift; sourceTree = "<group>"; };
+		0462F37629278F500005594F /* Eat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eat.swift; sourceTree = "<group>"; };
 		04C2A8062923C7EC006BFFD6 /* Color+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Assets.swift"; sourceTree = "<group>"; };
 		04C2A80D2923CC26006BFFD6 /* GeneralRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralRect.swift; sourceTree = "<group>"; };
 		04C2A8112923CE13006BFFD6 /* MileCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MileCircle.swift; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 			children = (
 				0462F36B29273F080005594F /* Shop.swift */,
 				0462F36D29273F5D0005594F /* StayExplore.swift */,
-				0462F37629278F500005594F /* EatFood.swift */,
+				0462F37629278F500005594F /* Eat.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -482,7 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0462F37729278F500005594F /* EatFood.swift in Sources */,
+				0462F37729278F500005594F /* Eat.swift in Sources */,
 				0462F36729266CBB0005594F /* BackgroundView.swift in Sources */,
 				0405406829262D40004471E1 /* HeadingText.swift in Sources */,
 				04C2A8162923DB55006BFFD6 /* RoundButton.swift in Sources */,
