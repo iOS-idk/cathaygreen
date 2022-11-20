@@ -16,6 +16,6 @@ export class ResponseInterceptor<T>
     _context: ExecutionContext,
     next: CallHandler,
   ): Observable<HttpSuccessResponse<T>> {
-    return next.handle().pipe(map((data) => ({ ...data })));
+    return next.handle().pipe(map((data) => ({ data })));
   }
 }

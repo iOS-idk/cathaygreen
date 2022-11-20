@@ -1,11 +1,10 @@
-import { APP_INTERCEPTOR, APP_PIPE } from '@nestjs/core';
+import { APP_PIPE } from '@nestjs/core';
 import { AppConfig } from './app.config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CathaygreenModule } from '@mod/cathaygreen/cathaygreen.module';
 import { ConfigModule } from '@nestjs/config';
 import { Module, ValidationError, ValidationPipe } from '@nestjs/common';
-import { ResponseInterceptor } from '@/interceptors/response.interceptor';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
@@ -29,7 +28,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       }),
     },
 
-    { provide: APP_INTERCEPTOR, useClass: ResponseInterceptor },
+    // { provide: APP_INTERCEPTOR, useClass: ResponseInterceptor },
   ],
 })
 export class AppModule {}
