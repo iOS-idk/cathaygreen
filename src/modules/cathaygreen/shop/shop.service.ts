@@ -39,4 +39,9 @@ export class ShopService {
     });
     return record;
   }
+
+  async remove(id: number) {
+    const shop = await this.shopRepo.findOneBy({ id });
+    await this.shopRepo.remove(shop);
+  }
 }

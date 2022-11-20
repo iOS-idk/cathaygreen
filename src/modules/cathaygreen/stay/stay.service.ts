@@ -39,4 +39,9 @@ export class StayService {
     });
     return record;
   }
+
+  async remove(id: number) {
+    const stay = await this.stayRepo.findOneBy({ id });
+    await this.stayRepo.remove(stay);
+  }
 }

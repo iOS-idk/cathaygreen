@@ -1,5 +1,5 @@
 import { ApiTags } from '@nestjs/swagger';
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { CreateEatDto } from './dto/create-eat.dto';
 import { EatService } from './eat.service';
 import { Meal } from '../enums';
@@ -32,5 +32,10 @@ export class EatController {
   @Get('reserve/:id')
   reserve(@Param('id') id: string) {
     return this.eatService.reserve(+id);
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.eatService.remove(+id);
   }
 }

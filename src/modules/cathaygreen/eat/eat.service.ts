@@ -42,4 +42,9 @@ export class EatService {
     });
     return record;
   }
+
+  async remove(id: number) {
+    const eat = await this.eatRepo.findOneBy({ id });
+    await this.eatRepo.remove(eat);
+  }
 }

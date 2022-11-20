@@ -1,5 +1,5 @@
 import { ApiTags } from '@nestjs/swagger';
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { CreateStayDto } from './dto/create-stay.dto';
 import { Record } from '../record/entities/record.entity';
 import { Stay } from './entities/stay.entity';
@@ -27,5 +27,10 @@ export class StayController {
   @Get('reserve/:id')
   reserve(@Param('id') id: string): Promise<Record> {
     return this.stayService.reserve(+id);
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.stayService.remove(+id);
   }
 }

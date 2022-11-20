@@ -1,5 +1,5 @@
 import { ApiTags } from '@nestjs/swagger';
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { CreateExploreDto } from './dto/create-explore.dto';
 import { ExploreService } from './explore.service';
 
@@ -25,5 +25,10 @@ export class ExploreController {
   @Get('reserve/:id')
   reserve(@Param('id') id: string) {
     return this.exploreService.reserve(+id);
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.exploreService.remove(+id);
   }
 }

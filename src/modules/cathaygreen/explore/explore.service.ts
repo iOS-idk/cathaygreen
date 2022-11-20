@@ -40,4 +40,9 @@ export class ExploreService {
     });
     return record;
   }
+
+  async remove(id: number) {
+    const explore = await this.exploreRepo.findOneBy({ id });
+    await this.exploreRepo.remove(explore);
+  }
 }

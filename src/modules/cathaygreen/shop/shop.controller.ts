@@ -1,5 +1,5 @@
 import { ApiTags } from '@nestjs/swagger';
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { CreateShopDto } from './dto/create-shop.dto';
 import { ShopService } from './shop.service';
 
@@ -24,5 +24,10 @@ export class ShopController {
   @Get('reserve/:id')
   reserve(@Param('id') id: string) {
     return this.shopService.reserve(+id);
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.shopService.remove(+id);
   }
 }
