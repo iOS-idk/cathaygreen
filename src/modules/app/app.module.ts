@@ -2,7 +2,6 @@ import { APP_PIPE } from '@nestjs/core';
 import { AppConfig } from './app.config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { CathaygreenModule } from '@mod/cathaygreen/cathaygreen.module';
 import { ConfigModule } from '@nestjs/config';
 import { Module, ValidationError, ValidationPipe } from '@nestjs/common';
 import { PuppeteerModule } from '../puppeteer';
@@ -20,7 +19,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       `Browser-1`, // optional, can be useful for using Chrome and Firefox in the same project
     ),
     // Other Modules
-    CathaygreenModule,
   ],
   controllers: [AppController],
   providers: [
